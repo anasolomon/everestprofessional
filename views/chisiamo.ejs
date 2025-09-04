@@ -1,0 +1,153 @@
+<%- include('partials/header', { metaDescription: 'Everest, con 40 anni di esperienza, offre vendita, ricondizionamento e installazione di frigoriferi professionali per wine, beverage, gelato e catering.', pageTitle: 'CHI SIAMO - Everest Casale Monferrato' }) %>
+
+<style>
+.chi-siamo{
+  margin: 50px 5%;
+  display: flex;
+  flex-wrap: wrap;
+}
+h1{
+  width: 100%;
+  font-size: 3rem;
+  color: #0014b9;
+}
+.chi-siamo-img{
+  background-image: url(/imgs/chi-siamo.png);
+  background-repeat: no-repeat;
+  height: 1038px;
+  width: 50%;
+}
+.chi-siamo-img,
+.contenitore-testo{
+  display: inline-block;
+  vertical-align: top;
+}
+.contenitore-testo{
+    margin-left: 5%;
+    width: 40%;
+}
+.contenitore-testo p, li{
+    margin-top: 20px;
+    font-size: 1.3rem;
+}
+.contenitore-testo > p, .carta > h4{
+    color: #254090;
+}
+.carta{
+    margin-top: 30px;
+}
+.carta h4{
+    margin-bottom: 5px;
+}
+.carta1, .carta2{
+    width: 45%;
+    display: inline-block;
+}
+.carta2{
+    float: right;
+}
+.carta1, .carta2 p{
+  color: #3073c0;
+}
+
+
+@media (max-width: 1024px) {
+  .chi-siamo-img{
+    position: relative;
+    width: 100%;
+    height: 1100px;
+    background-size: cover;
+  }
+  h1{
+    display: none;
+  }
+  .contenitore-testo > p{
+    margin: 0;
+  }
+  .contenitore-testo{
+    position: absolute;
+    width: 80%;
+    height: auto;
+    font-weight: 900;
+    background-color: #ffffffe0;
+    padding: 10px 20px;
+    margin: 20px 5%;
+    border-radius: 8px;
+  }
+
+  .contenitore-testo > img{
+    display: none;
+  }
+
+  .carta2{
+    clear: right;
+  }
+}
+
+@media (max-width: 640px) {
+  /* .chi-siamo{
+    height: 1500px;
+  } */
+
+  .chi-siamo-img{
+    height: 1450px;
+    background-position: right center;
+  }
+
+  .contenitore-testo p, li{
+    font-size: 1rem;
+  }
+}
+
+</style>
+
+<%- include('partials/navbar'); -%>
+
+<!-- CHI SIAMO -->
+
+<div class="chi-siamo">
+  <h1>Chi Siamo</h1>
+  <div class="chi-siamo-img"></div>
+
+  <div class="contenitore-testo">
+    <img src="imgs/creacoldeverest.png" alt="logo creacold e everest">
+    <p>
+      Partnership di due aziende specializzate nel mondo della 
+      refrigerazione professionale e commerciale, create da figure con oltre 40 anni di esperienza in ruoli chiave presso aziende produttive internazionali. <br>
+      L'unione di competenze per garantire un servizio a 360°. <br>
+      Constante assistenza dell'acquisito per tutto il percorso di vita del prodotto,
+      con garanzie estese. <br>
+      Siamo attenti a tutte le problematiche ambientali, in particolare ai temi 
+      dell'efficientamento energetico e nella rigenerazione di apparecchiature, anche obsolete, 
+      che diversamente sarebbero da rottamare.
+    </p>
+
+    <div class="carta1">
+      <div class="carta">
+        <p>Grazie alla partnership con aziende internazionali siamo in grado di:</p>
+        <ul style="margin-left: 20px;">
+          <li>concepire e produrre attrezzature su richieste specifiche dei nostri clienti partner: design, tecnologia e termodinamica</li>
+          <li>offrire una vasta gamma di attrezzature selezionate e garantite con un ottimo rapporto qualità/prezzo.</li>
+        </ul>
+      </div>
+      
+      <div class="carta">
+        <p>La nostra sede centrale di 3000 mq è nella zona industriale di Casale Monferrato città storica del freddo.  
+          Oltre agli uffici ed un apio magazzino di stoccaggio, abbiamo un importante 
+          laboratorio nel quale vengono effettuate riparazioni e sanificazioni su qualsiasi attrezzature frigorifere.</p>
+      </div>
+    </div>
+
+    <div class="carta2">
+      <div class="carta">
+        <p>L'azienda è cresciuta negli anni in modo esponenziale grazie alla fiducia dei nostri clienti.
+          Distributori, rivenditori e aziende produttrici come ad esempio: 
+          Asahi, Heineken, Forst, Ferrero e Lesaffre. <br> 
+          La fiducia dei nostri partner clienti ci sprona ad implementare la nostra professionalità per fornire sempre più servizi al meglio.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%- include('partials/footer'); -%>

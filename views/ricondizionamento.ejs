@@ -1,0 +1,576 @@
+<%- include('partials/header', { metaDescription: 'Ricondizionamento tecnico ed estetico di attrezzature frigorifere: pulizia, test, riparazioni con ricambi sostenibili e smaltimento RAEE certificato.', pageTitle: 'Ricondizionamento - Everest Casale Monferrato' }) %>
+
+<style>
+.center{
+  text-align: center;
+}
+.ricondizionamento-contenitore{
+  margin: 0 auto;
+  width: 80%;
+  padding: 5% 0;
+}
+.ricondizionamento-contenitore > ol{
+  margin-bottom: 30px;
+}
+h2, h4{
+  color: #254090;
+  font-weight: 900;
+  margin-bottom: 30px;
+}
+ol, ul{
+  padding-left: 20px;
+}
+ul{
+  margin-top: 30px;
+}
+.img-albero{
+  background-image: url(imgs/albero.jpg);
+  width: 20%;
+  height: 550px;
+  float: right;
+  margin-right: 5%;
+}
+
+/* PROCESS. RICON. TERMOD. */
+.processo-contenitore{
+  clear: right;
+}
+.contenitore-testo{
+  display: flex;
+  justify-content: space-around;
+}
+.processo-contenitore h2{
+  margin: 60px 0;
+  text-align: center;
+}
+.contenitore-img{
+  width: 100%;
+  display: flex;
+  gap: 20px;
+}
+.img-processo{
+  width: 25%;
+}
+
+.img-processo img, .sede-card img, .contenitore-img-descrittive img{
+  width: 100%;
+  height: 100%;
+}
+
+/* TEST TERMOD. */
+.contenitore-data{
+  display: flex;
+  justify-content: space-around;
+}
+
+.data-card > p{
+  padding: 10px;
+  font-weight: 600;
+  border: 1px solid black;
+  border-bottom: 5px solid black;
+}
+
+/* LA SEDE */
+.contenitore-sede{
+  display: flex;
+  margin: 0 auto;
+  padding-top: 100px;
+  width: 80%;
+  flex-wrap: wrap;
+}
+
+.sede-card{
+  flex: 0.4;
+}
+
+.speciale{
+  flex: 1;
+}
+
+.sede-testo{
+  background-color: #254090;
+  padding: 50px 0 50px 20px;
+  margin-top: 20px;
+}
+
+.sede-card h1, .sede-card h2{
+  color: white;
+  margin: 30px 0;
+}
+
+.creacoldlogo{
+  background-image: url(imgs/creacoldeverest.png);
+  height: 100px;
+  background-size: 100% 100%;
+  background-size: contain;
+  background-position: center;
+  margin: 20px;
+  background-repeat: no-repeat;
+}
+.creacoldlogo2{
+  background-image: url(imgs/creacoldeverest.png);
+  height: 100px;
+  background-size: 100% 100%;
+  background-size: contain;
+  background-position: center;
+  margin: 20px;
+  background-repeat: no-repeat;
+  display: none;
+}
+
+/* foto sede */
+.contenitore-img-descrittive{
+  width: 80%;
+  padding: 20px 0 100px 0;
+  margin: 0 auto;
+  display: flex;
+  gap: 30px;
+}
+
+/* CAROUSEL DEI PARTNER */
+.carousel {
+	position: relative;
+	width: 100%;
+	height: 504px;
+  margin: 0;
+	padding: 0;
+	overflow: hidden;
+	transform: translateZ(0px); /* stops flickering */
+}
+.carousel__buffer {
+	display: none;
+}
+.carousel__buffer img {
+	margin: 55px auto 18px;
+	width: 553px;
+	height: 347px;
+  margin: 0;
+	padding: 0;
+	overflow: hidden;
+	transform: translateZ(0px); /* stops flickering */
+}
+.carousel__buffer {
+	display: none;
+}
+.carousel__buffer img {
+	margin: 55px auto 18px;
+	width: 553px;
+	height: 347px;
+}
+.carousel__slide {
+	position: absolute;
+	opacity: 0;
+	width: 100%;
+	height: 100%;
+	-webkit-transition: opacity 1s;
+    -moz-transition: opacity 1s;
+	-o-transition: opacity 1s;
+	transition: opacity 1s;
+	background: no-repeat center top;
+	background-size: cover;
+	overflow: auto;
+}
+.carousel__slide img {
+	display: block;
+	position: relative;
+	margin: 55px auto 50px;
+	width: 553px;
+	height: 347px;
+	-webkit-box-shadow: 0 0 50px 0 rgba(0,0,0,0.8);
+	-moz-box-shadow: 0 0 50px 0 rgba(0,0,0,0.8);
+	box-shadow: 0 0 50px 0 rgba(0,0,0,0.8);
+}
+.carousel__input:checked + .carousel__slide {
+	position: static;
+	opacity: 1;
+}
+.carousel__arrow {
+	position: absolute;
+	display: none;
+	cursor: pointer;
+	background: #191919;
+	top: 210px;
+	left: 50%;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	z-index: 10;
+}
+.carousel__arrow:before {
+	position: absolute;
+	content: "";
+  padding: 8px; /* Arrow size */
+	box-shadow: 1px -1px 0 1px #0072bc inset;
+	-webkit-box-shadow: 2px -2px #0072bc inset;
+	-moz-box-shadow: 2px -2px #0072bc inset;
+	border: solid transparent;
+	border-width: 0 0 2rem 2rem;
+}
+.carousel__arrow--prev {
+	margin-left: -343px;
+}
+.carousel__arrow--prev:before {
+	transform: rotate(45deg);
+	margin: -4px 0 0 -24px;
+}
+.carousel__arrow--next {
+	margin-left: 303px;
+}
+.carousel__arrow--next:before {
+    transform: rotate(225deg);
+	margin: -4px 0 0 15px;
+}
+
+#carousel__slide--1:checked ~ .carousel__arrow--1,
+#carousel__slide--2:checked ~ .carousel__arrow--2,
+#carousel__slide--3:checked ~ .carousel__arrow--3,
+#carousel__slide--4:checked ~ .carousel__arrow--4,
+#carousel__slide--5:checked ~ .carousel__arrow--5 {
+	display: block;
+}
+
+.carousel__bullets {
+	list-style: none;
+	margin: 12px auto -6px;
+	padding: 0;
+	position: absolute;
+	top: 408px;
+    left: 0;
+	right: 0;
+	text-align: center;
+	z-index: 10;
+}
+.carousel__bullets li {
+	display: inline-block;
+}
+.carousel__bullets--bullet {
+	cursor: pointer;
+	display: block;
+	width: 10px;
+	height: 10px;
+	margin: 0 4px 0;
+	border-radius: 50%;
+	background: rgba(0,0,0,0);
+	border: 1px solid #6e7c7f;
+}
+#carousel__slide--1:checked ~ .carousel__arrow--1 ~ .carousel__bullets li:nth-child(1) .carousel__bullets--bullet,
+#carousel__slide--2:checked ~ .carousel__arrow--2 ~ .carousel__bullets li:nth-child(2) .carousel__bullets--bullet,
+#carousel__slide--3:checked ~ .carousel__arrow--3 ~ .carousel__bullets li:nth-child(3) .carousel__bullets--bullet,
+#carousel__slide--4:checked ~ .carousel__arrow--4 ~ .carousel__bullets li:nth-child(4) .carousel__bullets--bullet,
+#carousel__slide--5:checked ~ .carousel__arrow--5 ~ .carousel__bullets li:nth-child(5) .carousel__bullets--bullet {
+	background: #0072bc;
+	box-shadow: inset 0 0 0 2px #12171b; /* Separates blue dot from border */
+}
+
+@media screen and (max-width: 690px) {
+	.carousel__buffer {
+		width: 100%;
+		position: relative;
+		display: inline-block;
+		visibility: hidden;
+    z-index: -1;
+		padding-bottom: 120px;
+	}
+	.carousel__buffer img {
+		width: 100%;
+		height: auto;
+		-webkit-box-shadow: none;
+		-moz-box-shadow: none;
+		box-shadow: none;
+		margin-top: 0;
+	}
+	.carousel {
+		height: auto;
+		overflow: visible;
+	}
+	.carousel__slide {
+		-webkit-transition: opacity 0s;
+		-moz-transition: opacity 0s;
+		-o-transition: opacity 0s;
+		transition: opacity 0s;
+		position: absolute;
+        top:0;
+		height: auto;
+		background: transparent none !important;
+	}
+	.carousel__slide img {
+		width: 100%;
+		height: auto;
+		-webkit-box-shadow: none;
+		-moz-box-shadow: none;
+		box-shadow: none;
+		margin-top: 0;
+	}
+	.carousel__arrow {
+		top: calc(50% - 70px);
+	}
+	.carousel__arrow--prev {
+		margin-left: -48%;
+	}
+	.carousel__arrow--next {
+		margin-left: calc(48% - 40px);
+	}
+    .carousel__bullets {
+		top: auto;
+		bottom: 40px;
+	}
+}
+
+
+/* RESPONSIVNESS */
+/* TABLET e più piccoli */
+@media (max-width: 1024px) {
+  .data-card p{
+    width: 300px;
+  }
+  .data-card img{
+    width: 300px;
+  }
+  .test-term-second-img{
+    margin-top: 70px !important;
+  }
+
+  .speciale{
+    flex: 0.8;
+    height: 600px;
+  }
+
+}
+
+/* TELEFONO */
+@media (max-width: 640px) {
+  .img-albero{
+    display: none;
+  }
+
+  .contenitore-testo h4{
+    font-size: 0.7rem;
+    width: 100px;
+  }
+
+  .data-card p{
+    width: 200px;
+    font-size: 0.7rem;
+  }
+  .data-card img{
+    width: 200px;
+  }
+  .test-term-second-img{
+    margin-top: 80px !important;
+  }
+
+  /* LA SEDE */
+  .contenitore-sede{
+    width: 100%;
+  }
+  .sede-testo{
+    height: 400px;
+  }
+
+  .sede-testo h1{
+    font-size: 1.5rem;
+  }
+  .sede-testo h2{
+    font-size: 1rem;
+  }
+
+  .creacoldlogo{
+    display: none;
+  }
+  
+  .creacoldlogo2{
+    display: block;
+  }
+  .speciale{
+    height: 250px;
+  }
+
+  /* foto sede */
+  .contenitore-img-descrittive{
+    width: 100%;
+    gap: 5px;
+  }
+}
+</style>
+
+<%- include('partials/navbar'); -%>
+
+</header>
+
+<!-- RICON. TECNICO/ESTETICO -->
+<div class="ricondizionamento-contenitore">
+  <div class="img-albero"></div>
+  <h2>RICONDIZIONAMENTO TECNICO/ESTETICO</h2>
+
+  <h4>COME OPERIAMO</h4>
+
+    <p>
+      Ogni mobile che entra nel nostro sistema viene catalogato con queste
+      informazioni:
+    </p>
+    <ol>
+      <li>
+        Data di arrivo nei nostri magazzini e sua ubicazione
+      </li>
+      <li>
+        Integrazione nel nostro sistema IT
+      </li>
+      <li>
+        Foto all'ingresso
+      </li>
+      <li>Scheda dedicata</li>
+    </ol>
+
+    <h4>RICONDIZIONAMENTO</h4>
+    <ul>
+    <li>Ingresso in Laboratorio per pulizia e test </li>
+    <li>Pulizia completa con sanificazione della vasca e del vano motore </li>
+    <li>Intervento sul gruppo refrigerante</li>
+    <li>Controllo di tutti i componenti</li>
+    <li>Test termodinamico mediante datalogger(registratore di temperatura) che viene</li>
+    <li>analizzato e la scheda inserita nelle attrezzature</li>
+    <li>Test componenti elettrici</li>
+    <li>Verifica dei componenti estetici ed eventale sostituzione</li>
+    <li>Spesso i ricambi li prendiamo da altre attrezzature non più funzionanti 
+      senza la</li>
+    <li>necessità di acquistarne di nuovi (i ricambi nuovi sono molto cari)</li>
+    </ul>
+    <ul>
+      <li>Possibilità di realizzare nuove personalizzazioni delle attrezzature 
+        mediante adesivi o pannelli personalizzati</li>
+        <li>Imballaggio</li>
+        <li>Servizio di demolizione RAEE (Siamo membri di un programma di 
+          riciclaggio con partner approvati)</li>
+    </ul>
+</div>
+
+  <a href="#testing"></a>
+<!-- PROCESS. RICON. TERMOD. -->
+<div class="processo-contenitore">
+  <h2>PROCESSO RICONDIZIONAMENTO TERMODINAMICO</h2>
+
+  <div class="contenitore-testo">
+    <div class="testo">
+      <h4 style="margin-bottom: 50px;">CERCA FUGHE DI GAS ELETTRONICO</h4>
+    </div>
+    <div class="testo">
+      <h4 style="margin-bottom: 50px;">VUOTO E CARICA GAS</h4>
+    </div>
+  </div>
+
+  <div class="contenitore-img">
+    <div class="img-processo"><img src="imgs/processo1.png" alt=""></div>
+    <div class="img-processo"><img src="imgs/processo2.png" alt=""></div>
+    <div class="img-processo"><img src="imgs/processo3.png" alt=""></div>
+    <div class="img-processo"><img src="imgs/processo4.png" alt=""></div>
+  </div>
+
+  <!-- TEST TERMOD. -->
+  <h4 style="text-align: center; margin: 60px 0;">TEST TERMODINAMICO CON DATA LOGGER E RILASCIO GRAFICO PER OGNI ATTREZZAUTARE RICONDIZIONATA</h4>
+
+  <div class="contenitore-data">
+    <div class="data-card">
+      <p>TEST A: GRAFICO DELLE TEMPERATURE | TEMPERATURE GRAPH</p>
+      <img src="imgs/data1.png" alt="">
+    </div>
+
+    <div class="data-card">
+      <img src="imgs/data2.png" alt="" style="margin-top: 35px;" class="test-term-second-img">
+    </div>
+  </div>
+</div>
+
+<!-- LA SEDE -->
+<div class="contenitore-sede">
+
+  <div class="sede-card">
+    <div class="sede-testo">
+      <h1>LA NOSTRA SEDE:</h1>
+        <h2>- <span class="counter" data-target="3000">0</span> mq di magazzino</h2>
+        <h2>- <span class="counter" data-target="300">0</span> mq di laboratorio</h2>
+        <h2>- <span class="counter" data-target="150">0</span> mq di uffici</h2>
+      </div>
+      <div class="creacoldlogo"></div>
+    </div>
+
+    <div class="sede-card speciale">
+      <!-- img sede -->
+      <img src="imgs/sede3.png" alt="">
+      <div class="creacoldlogo2"></div>
+    </div>
+
+</div>
+
+<!-- foto sede -->
+<div class="contenitore-img-descrittive">
+  <div class="card"><img src="imgs/sede1.png" alt=""></div>
+  <div class="card"><img src="imgs/sede2.png" alt=""></div>
+  <div class="card"><img src="imgs/attrezzature.png" alt=""></div>
+</div>
+
+<!-- PARTNER -->
+<h2 class="center" style="margin-bottom: 40px;">I NOSTRI PARTNER CHE SI AFFIDANO A NOI PER IL RICONDIZIONAMENTO DELLE ATTREZZATURE</h2>
+
+<!-- CAROUSEL DEI PARTNER -->
+<section class="carousel">
+    <input class="carousel__input" type="radio" id="carousel__slide--1" name="carousel" aria-hidden="true" hidden="" checked="checked">
+    <div class="carousel__slide" style="background-image:url(imgs/hero.png)">
+        <img src="imgs/ferrero.png">
+    </div>
+        <input class="carousel__input" type="radio" id="carousel__slide--2" name="carousel" aria-hidden="true" hidden="">
+	<div class="carousel__slide" style="background-image:url(imgs/hero.png)">
+		<img src="imgs/heineken.png">
+	</div>
+
+	<input class="carousel__input" type="radio" id="carousel__slide--3" name="carousel" aria-hidden="true" hidden="">
+	<div class="carousel__slide" style="background-image:url(imgs/hero.png)">
+		<img src="imgs/forst.png">
+	</div>
+
+	<input class="carousel__input" type="radio" id="carousel__slide--4" name="carousel" aria-hidden="true" hidden="">
+	<div class="carousel__slide" style="background-image:url(imgs/hero.png)">
+		<img src="imgs/lesaffre.png">
+	</div>
+
+	<input class="carousel__input" type="radio" id="carousel__slide--5" name="carousel" aria-hidden="true" hidden="">
+	<div class="carousel__slide" style="background-image:url(imgs/hero.png)">
+		<img src="imgs/ghiacciofacile.png">
+		<div class="carousel__caption">
+		</div>
+	</div>
+	
+	<!-- ARROWS -->
+	<label for="carousel__slide--5" class="carousel__arrow carousel__arrow--prev carousel__arrow--1"></label>
+	<label for="carousel__slide--5" class="carousel__arrow carousel__arrow--next carousel__arrow--4"></label>
+	<label for="carousel__slide--4" class="carousel__arrow carousel__arrow--prev carousel__arrow--5"></label>
+	<label for="carousel__slide--4" class="carousel__arrow carousel__arrow--next carousel__arrow--3"></label>
+	<label for="carousel__slide--3" class="carousel__arrow carousel__arrow--prev carousel__arrow--4">
+    </label>
+	<label for="carousel__slide--3" class="carousel__arrow carousel__arrow--next carousel__arrow--2"></label>
+	<label for="carousel__slide--2" class="carousel__arrow carousel__arrow--prev carousel__arrow--3"></label>
+	<label for="carousel__slide--2" class="carousel__arrow carousel__arrow--next carousel__arrow--1"></label>
+	<label for="carousel__slide--1" class="carousel__arrow carousel__arrow--prev carousel__arrow--2"></label>
+	<label for="carousel__slide--1" class="carousel__arrow carousel__arrow--next carousel__arrow--5"></label>
+
+	<!-- BULLETS -->
+	<ol class="carousel__bullets">
+		<li>
+			<label for="carousel__slide--1" class="carousel__bullets--bullet"></label>
+		</li>
+		<li>
+			<label for="carousel__slide--2" class="carousel__bullets--bullet"></label>
+		</li>
+		<li>
+			<label for="carousel__slide--3" class="carousel__bullets--bullet"></label>
+		</li>
+		<li>
+			<label for="carousel__slide--4" class="carousel__bullets--bullet"></label>
+		</li>
+		<li>
+			<label for="carousel__slide--5" class="carousel__bullets--bullet"></label>
+		</li>
+	</ol>
+</section>
+
+
+<%- include('partials/footer'); -%>

@@ -1,0 +1,283 @@
+<%- include('partials/header', { metaDescription: 'Dettagli e caratteristiche del frigorifero professionale ' + product.name + ', ideale per ' + product.type + '. Qualità garantita.', pageTitle: product.name }) %>
+
+<style>
+hr{
+  width: 100px;
+  height: 10px;
+  border: 0;
+}
+
+.div_h1, .nome-prodotto, .dimensioni, .shop_section{
+  padding-left: 20px;
+}
+
+.dimensioni, .contenitore-immagini, .tabella,  .border_left{
+  border-left: 1px solid black;
+}
+
+/* PAGINA CENTRATA */
+.centered_page{
+  padding: 50px 0;
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* CONTANITORE GRID */
+.container{
+  display: grid;
+  grid-template-columns: 0.1fr 1fr;
+  grid-template-rows: 0.1fr 0.2fr 0.1fr 1fr 0.4fr 0.1fr 0.1fr;
+}
+
+
+/* NOME PRODOTTO */
+.nome-prodotto{
+  background-color: #e6e7e8;
+  padding-top: 50px;
+}
+
+.testo-grande{
+  font-size: 3rem;
+  font-weight: 900;
+  width: 500px;
+}
+
+/* DIMENSIONI PRODOTTO */
+.dimensioni{
+  padding-top: 20px;
+}
+
+
+/* CONTENITORE IMMAGINI */
+.contenitore-immagini{
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 10px;
+}
+
+.prodotto-img{
+  max-height: 60%;
+  width: auto; /* maintains aspect ratio */
+  object-fit: contain;
+}
+
+.contenitore-immagini > div{
+  width: 40%;
+}
+
+.contenitore-immagini img{
+  max-width: 100%;
+  height: auto;
+}
+
+.prodotto-img img {
+  max-height: 600px;
+  width: auto;
+  object-fit: contain;
+  max-width: 100%;
+}
+
+.prodotto-img, .schema-img {
+  max-height: 600px;
+  display: flex;
+  align-items: center;
+}
+
+.prodotto-img img, .schema-img img {
+  max-height: 100%;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+
+/* TABELLA INFO */
+.tabella{
+  display: grid;
+  grid-template-columns: 1fr 2fr 0.5fr;
+  grid-template-rows: auto;
+  border-top: 1px dotted #000;
+  border-bottom: 1px dotted #000; 
+}
+
+.row1, .row2, .row3{
+  display: flex;
+  flex-direction: column;
+}
+
+.row1 > div, .row2 > div{
+  padding: 3px 0;
+  border-top: 1px dotted #000;
+}
+
+.row1 > div{
+  padding-left: 20px;
+}
+.row3{
+  align-self: flex-end;
+  border-top: 1px dotted #000;
+  margin: 0 0 0 20px;
+}
+.classe_energetica{
+  width: 100%;
+}
+
+
+/* SHOP SECTION */
+.shop_section{
+  background-color: #e6e7e8;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.shop_section button{
+  color: white;
+  padding: 10px 0;
+  font-size: 2rem;
+  font-weight: 900;
+  cursor: pointer;
+  width: 500px;
+  height: 100%;
+  border: none;
+}
+
+
+/* RESPONSIVNESS */
+
+/* TABLET e più piccoli */
+@media (max-width: 1024px) {
+
+  .div_h1{
+    font-size: 1rem;
+  }
+
+  .testo-grande{
+    font-size: 2rem;
+  }
+
+  .tabella{
+    grid-template-columns: 0.8fr 1fr 0.4fr;
+  }
+
+  .shop_section button{
+    width: 200px;
+  }
+}
+
+/* TELEFONO */
+@media (max-width: 640px) {
+  .centered_page{
+    width: 100%;
+    margin: 0;
+  }
+
+  .contenitore-immagini > div{
+    flex: 1;
+  }
+  .contenitore-immagini{
+    flex-direction: column;
+  }
+
+  .prodotto-img, .schema-img{
+    width: 300px !important;
+  }
+
+  .shop_section{
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .shop_section > div{
+    display: none;
+  }
+
+   .testo-grande{
+    font-size: 1.5rem;
+    width: 300px;
+  }
+
+  .tabella{
+    grid-template-columns: 1fr 1fr;
+  }
+  .tabella img{
+    display: none;
+  }
+
+  .row1 > div, .row2 > div{
+    height: 50px;
+  }
+}
+</style>
+
+<%- include('partials/navbar'); -%>
+
+<!-- PRODOTTO -->
+<div class="centered_page">
+  <div class="container">
+
+    <div></div>
+    <div class="div_h1">
+      <h1 style="color: <%= typeColor %>;"><%= product.type %><hr style="background-color: <%= typeColor %>;"></h1>
+    </div>
+
+    <div style="background-color: <%= typeColor %>;"></div>
+    <div class="nome-prodotto">
+      <div class="testo-grande"><%= product.name %></div>
+    </div>
+
+    <div></div>
+    <div class="dimensioni">
+      <p>Dimensioni esterne (LxPxH)</p>
+      <p style="font-weight: 600;"><%= product.dimensions %></p>
+    </div>
+
+    <!-- CONTENITORE IMMAGINI -->
+    <div></div>
+    <div class="contenitore-immagini">
+        <div class="prodotto-img"><img src="<%= product.images.product %>" alt=""></div>
+        <div class="schema-img"><img src="<%= product.images.schema %>" alt=""></div>
+    </div>
+
+    <div></div>
+    <div class="tabella">
+     <div class="row1">
+      <% product.specLabels.forEach((label, index) => { %>
+        <% if (index === 0) { %>
+          <div style="border: none;"><%= label %></div>
+        <% } else { %>
+          <div><%= label %></div>
+        <% } %>
+      <% }); %>
+    </div>
+      <div class="row2">
+        <% product.specs.forEach((spec, index) => { %>
+          <% if (index === 0) { %>
+            <div style="border: none;"><%= spec %></div>
+          <% } else { %>
+            <div><%= spec %></div>
+          <% } %>
+        <% }); %>
+      </div>
+
+      <div class="row3">
+        <img src="<%= product.energyClassImage %>" alt="" class="classe_energetica">
+      </div>
+    </div>
+
+    <div></div>
+    <div class="border_left"></div>
+
+    <!-- SEZIONE SHOP -->
+    <div style="background-color: <%= typeColor %>;"></div>
+    <div class="shop_section">
+      <div style="color: <%= typeColor %>;"><%= product.type %></div>
+      <a href="<%= product.link %>"><button style="background-color: <%= typeColor %>;">COMPRA</button></a>
+    </div>
+
+  </div>
+</div>
+
+<%- include('partials/footer'); -%>

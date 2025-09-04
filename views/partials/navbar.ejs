@@ -1,0 +1,71 @@
+<!-- BANNER -->
+<div class="banner" role="region" aria-label="Video background">
+  <video autoplay muted loop playsinline>
+    <source src="/imgs/bannervideo.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+</div>
+
+<!-- HEADER -->
+<header id="navbar">
+  <!-- navbar -->
+  <div class="logo-container">
+    <img class="logo" src="/imgs/creacoldeverest3.png" alt="creacold everest logo">
+   
+    <!-- <% if (showLogoText) { %>
+    <div class="logo-text">
+      <p>Attrezzatura</p>
+      <p>Frigoriferi</p>
+      <p>Professionali</p>
+    </div>
+    <% } %> -->
+
+  </div>
+  <nav>
+     <ul class="nav__links">
+      <li><a href="/" class="<%= activePage === 'home' ? 'active' : '' %>">HOME</a></li>
+      <li><a href="/servizi" class="<%= activePage === 'servizi' ? 'active' : '' %>">Servizi</a></li>
+      <li><a href="/vendita" class="<%= activePage === 'vendita' ? 'active' : '' %>">Vendita</a></li>
+      <li><a href="/chisiamo" class="<%= activePage === 'chisiamo' ? 'active' : '' %>">Chi Siamo</a></li>
+      <li><a href="/assistenza" class="<%= activePage === 'assistenza' ? 'active' : '' %>">Assistenza</a></li>
+    </ul>
+  </nav>
+
+<!-- Burger icon -->
+<div class="burger" id="burger" role="button" aria-label="Icona burger menu" tabindex="0">
+  <div></div>
+  <div></div>
+  <div></div>
+</div>
+
+<!-- Fullscreen overlay menu -->
+<div class="mobile-menu" id="mobileMenu" aria-label="Menu per telefono">
+  <button class="close-btn" id="closeMenu">&times;</button>
+  <ul>
+    <li><a href="/">HOME</a></li>
+    <li><a href="/chisiamo">CHI SIAMO</a></li>
+    <li><a href="/servizi">SERVIZI</a></li>
+    <li><a href="/vendita">VENDITA</a></li>
+    <li><a href="/assistenza">ASSISTENZA</a></li>
+  </ul>
+  <% if (showExtraMenu) { %>
+  <ul>
+    <li><a href="#wine">wine</a></li>
+    <li><a href="#beverage">beverage</a></li>
+    <li><a href="#icecream">ice cream</a></li>
+    <li><a href="#market">market</a></li>
+    <li><a href="#catering">catering</a></li>
+  </ul>
+  <% } %>
+</div>
+
+</header>
+
+<!-- Chat Button -->
+<!-- <div id="chat-container">
+  <div id="chat-button">💬</div>
+  <div id="chat-popup">
+    <div id="chat-messages"></div>
+    <input id="chat-input" type="text" placeholder="Scrivi la tua domanda..." />
+  </div>
+</div> -->

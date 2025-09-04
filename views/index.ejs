@@ -1,0 +1,635 @@
+<%- include('partials/header', { metaDescription: 'Everest Casale Monferrato: vendita e assistenza di frigoriferi professionali per vino, bevande, gelati, market e catering. Ricondizionati e pronti all uso.', pageTitle: 'Everest - Attrezzature Frigoriferi Professionali' }) %>
+<style>
+
+.banner{
+  height: 100vh;
+}
+
+.banner video{
+  position: fixed;
+}
+
+/* MAIN TEXT */
+.main_text{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  top: -500px;
+  width: 100%;
+  z-index: 900;
+}
+
+h1{
+  font-size: 64px;
+  line-height: 1.3;
+  color: white;
+  font-weight: 900;
+  margin: 30px 0;
+  /* text-shadow: 0.5px 0.5px 0 currentColor; */
+}
+
+.main_text p{
+  color: #b900a0;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 7px;
+  font-size: 15px;
+}
+
+
+.main_text_btn{
+  flex-grow: 2;
+}
+
+.main_text_btn button{
+  border-color: #0014b9;
+  border-radius: 50px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.main_text a{
+  font-size: 1rem;
+  text-decoration: none;
+  color: #b900a0;
+  transition: 0.3s;
+  background-color: transparent;
+}
+
+.btn_one{
+  background-color: #0014b9;
+}
+.btn_one a{
+  background-color: transparent !important;
+  color: white;
+}
+.btn_one:hover a{
+  color: #0014b9 !important;
+}
+.btn_one:hover, .btn_one:hover a {
+  background-color: #67C090;
+}
+
+.btn_two{ 
+  background-color: transparent;
+  margin-left: 15px;
+} 
+.btn_two:hover, .btn_one:hover a {
+  background-color: #0014b9;
+}
+
+
+
+/* FEATURES LIST SECTION */
+.row{
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+}
+
+.list-box{
+  display: flex;
+  align-items: center;
+  margin: 75px 140px 75px 0;
+}
+
+.fas{
+  color: #0014b9;
+  font-size: 24px;
+  margin-right: 15px;
+  width: 65px;
+  height: 65px;
+  text-align: center;
+  line-height: 60px;
+  border: 2px #0014b9 dotted;
+  border-radius: 999px;
+}
+
+.content h3{
+  line-height: 22px;
+  font-size: 18px;
+  margin-bottom: 4px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+.content p{
+  opacity: 0.75;
+  font-weight: 400;
+  font-size: 1rem;
+  letter-spacing: 0.1px;
+  line-height: 1.8;
+}
+
+/* SHOP */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 120px;
+  padding: 10px;
+  max-width: 90%;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  text-align: center;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  padding: 20px;
+  transition: box-shadow 0.1s ease-in-out;
+  align-items: center;
+}
+
+.card:hover {
+  box-shadow: none;
+  cursor: pointer;
+}
+
+.card-content {
+  width: 100%;
+  margin-top: auto;
+}
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.card h3 {
+  font-size: 1.2rem;
+  margin: 15px 0 5px 0;
+  color: #0014b9;
+}
+
+.card a, .box_descrizzione p {
+  font-size: 1rem;
+  color: #3073c0;
+}
+.icon-right {
+  margin-left: 8px;
+  color: #3073c0;
+  font-size: 0.95rem;
+  vertical-align: middle;
+  transition: transform 0.2s ease;
+}
+
+a:hover .icon-right {
+  transform: translateX(4px);
+}
+/* ANIMAZIONE */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card {
+  opacity: 0;
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+/* Ritardo progressivo per effetto "a cascata" */
+.card:nth-child(1) { animation-delay: 0.1s; }
+.card:nth-child(2) { animation-delay: 0.2s; }
+.card:nth-child(3) { animation-delay: 0.3s; }
+.card:nth-child(4) { animation-delay: 0.4s; }
+.card:nth-child(5) { animation-delay: 0.5s; }
+
+
+/* BOX DESCRIZZIONE */
+.box_descrizzione{
+  max-width: 40%;
+  margin: 0 auto;
+}
+
+.box_descrizzione h2{
+  font-size: 3rem;
+  color: #0014b9;
+  margin-top: 100px;
+}
+
+.box_descrizzione p{
+  font-size: 1.2rem;
+  margin-top: 30px;
+  line-height: 30px;
+}
+
+
+/* RICONDIZIONAMENTO */
+.ricondizionamento{
+  font-size: 3rem;
+  color: #0014b9;
+  text-align: center;
+  margin-top: 100px;
+}
+
+section > h2{
+  font-size: 3rem;
+  color: #0014b9;
+  text-align: center;
+  padding-top: 140px;
+}
+
+.contenitore-ricondizionamento{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin: 100px 0;
+}
+
+.contenitore-ricondizionamento > div{
+  position: relative;
+}
+
+.descrizzione-ricondizionamento{
+  position: absolute;
+  width: 80%;
+  text-align: center;
+  color: white;
+  font-size: 2rem;
+  font-weight: 900;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #3073c07c;
+  padding: 10px 20px;
+  border-radius: 8px;
+}
+
+.contenitore-ricondizionamento img{
+  width: 500px;
+  height: 500px;
+  border-radius: 20%;
+}
+
+.link-ricondizionamento{
+  position: absolute;
+  color: white;
+  bottom: 20px;
+  left: 50%;
+  transform: translate(-50%);
+  background-color: rgba(103, 207, 255, 0.5);
+  padding: 10px 20px;
+  border-radius: 8px;
+}
+
+.contenitore-ricondizionamento i{
+  color: white;
+}
+
+/* DOVE SIAMO */
+.dove-siamo{
+  margin: 20px 20% 0 20%;
+  padding-bottom: 100px;
+}
+.dove-siamo h2{
+  margin-bottom: 10px;
+  font-size: 3rem;
+  color: #0014b9;
+}
+.dove-siamo p, a{
+  margin-bottom: 5px;
+  font-size: 1.3rem;
+  color: #3073c0;
+}
+.posizione{
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 10%;
+}
+.posizione img{
+  margin: 10px 15px 0 0;
+}
+iframe, .posizione{
+  margin-top: 10px;
+}
+
+
+/* RESPONSIVNESS */
+/* TELEFONO */
+@media (max-width: 640px) {
+  .banner{
+    height: 90vh;
+  }
+  .main_text{
+    top: -500px;
+  }
+
+  .main_text p{
+    font-size: 13px;
+  }
+
+  .main_text h1{
+    font-size: 28px;
+  }
+
+  .main_text_btn{
+    flex-grow: 1;
+    width: 80%;
+  }
+
+  .main_text_btn button{
+    width: 100%;
+    margin: 0;
+  }
+
+  .btn_one{
+    margin-bottom: 15px !important;
+  }
+
+  .row{
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 30px 0 30px 200px;
+  }
+
+  .list-box{
+    margin: 20px 0;
+  }
+
+  h1{
+    font-size: 2rem;
+  }
+   .card-container {
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .card {
+    flex: 0 1 calc(50% - 20px); /* 2 per row, with gap */
+    max-width: 160px;
+    padding: 15px;
+  }
+
+  .card h2 {
+    font-size: 1rem;
+  }
+
+  .card p {
+    font-size: 0.9rem;
+  }
+
+  .icon-right {
+    font-size: 0.85rem;
+  }
+
+  .ricondizionamento{
+    font-size: 2.2rem;
+    font-weight: 900;
+  }
+
+  .contenitore-ricondizionamento > div img{
+    max-width: 400px;
+    height: 400px;
+  }
+
+  iframe{
+    max-width: 250px;
+    margin-top: 30px;
+  }
+}
+
+
+</style>
+
+<%- include('partials/navbar'); -%>
+
+<div class="main_text">
+  <p>A Casale Monferrato</p>
+  <h1>Attrezzature Frigoriferi Professionali</h1>
+  <div class="main_text_btn">
+    <button class="btn_one"><a href="/vendita">Shop</a></button>
+    <button class="btn_two"><a href="/assistenza">Contattaci</a></button>
+  </div>
+</div>
+
+<!-- features list section -->
+<div class="list-section pt-80 pb-80">
+  <div class="container">
+
+    <div class="row">
+      <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+        <div class="list-box d-flex align-items-center">
+          <div class="list-icon">
+            <i class="fas fa-shipping-fast"></i>
+          </div>
+          <div class="content">
+            <h3>Spedizione</h3>
+            <p>Spedizione in tutta Italia</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+        <div class="list-box d-flex align-items-center">
+          <div class="list-icon">
+            <i class="fas fa-phone-volume"></i>
+          </div>
+          <div class="content">
+            <h3>Assistenza</h3>
+            <p>Garanzia ciclo vita prodotto</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="list-box d-flex justify-content-start align-items-center">
+          <div class="list-icon">
+            <i class="fas fa-sync"></i>
+          </div>
+          <div class="content">
+            <h3>Garanzia</h3>
+            <p>Di ben 6 mesi!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!-- end features list section -->
+
+<section style="background-color: #F8FAFC;">
+  <main>
+    <section>
+  <!-- SHOP -->
+      <h2>I Nostri <span style="color: #67C090;">Prodotti</span></h2>
+      <div class="card-container" aria-label="Prodotti in vetrina">
+
+      <div class="card">
+        <div class="card-image">
+          <img src="imgs/frigovino.png" alt="Frigorifero professionale per la conservazione del vino modello Nettare 400 Prof.">
+        </div>
+        <div class="card-content">
+        <h3>Wine</h3>
+        <a href="/vendita#wine">Scopri il prodotto
+            <i class="fa-solid fa-arrow-right-from-bracket icon-right" aria-hidden="true"></i></a> </a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-image">
+          <img src="imgs/frigobeverages.png" alt="Frigorifero professionale per la conservazione di beverage modello Cumbia 380 CA 2 LED">
+        </div>
+        <div class="card-content">
+        <h3>Beverage</h3>
+        <a href="/vendita#beverage">Scopri il prodotto
+            <i class="fa-solid fa-arrow-right-from-bracket icon-right" aria-hidden="true"></i></a> 
+        </a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-image" style="margin-top: 20%;">
+          <img src="imgs/frigopastry.png" alt="Frigorifero professionale per la conservazione di ice cream modello Gelo Glass Curved 300">
+        </div>
+        <div class="card-content">
+        <h3>Ice Cream</h3>
+        <a href="/vendita#icecream">Scopri il prodotto
+            <i class="fa-solid fa-arrow-right-from-bracket icon-right" aria-hidden="true"></i></a> 
+        </a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-image" style="padding-top: 25%;">
+          <img src="imgs/frigomarket.png" alt="Frigorifero professionale per la conservazione di prodotti market modello Maxigelo 220">
+        </div>
+        <div class="card-content">
+        <h3>Market</h3>
+        <a href="/vendita#market">Scopri il prodotto
+            <i class="fa-solid fa-arrow-right-from-bracket icon-right" aria-hidden="true"></i></a> 
+        </a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-image">
+          <img src="imgs/frigocatering.png" alt="Frigorifero professionale per la conservazione per catering modello Perfekt 700 TN">
+        </div>
+        <div class="card-content">
+        <h3>Catering</h3>
+        <a href="/vendita#catering">Scopri il prodotto
+            <i class="fa-solid fa-arrow-right-from-bracket icon-right" aria-hidden="true"></i></a> 
+        </a>
+        </div>
+      </div>
+      </div>
+  <!-- END SHOP -->
+
+<!-- DESCRIZZIONE EVEREST -->
+<!-- <div class="box_descrizzione">
+  <h2>Chi è Everest?</h2>
+  <p>Everest nasce da una solida partnership,
+    quarant’anni d’esperienza professionale,
+    attrezzature innovative per refrigerazione,
+    frigoriferi moderni e soluzioni su misura,
+    servizi completi con garanzie estese,
+    assistenza continua per ogni cliente.
+<br>
+    Attenzione costante a impatto ambientale,
+    efficientamento energetico al primo posto,
+    rigenerazione apparecchiature anche obsolete,
+    qualità e risparmio unite con passione,
+    fiducia costruita con grandi aziende,
+    come Ferrero, Heineken e Forst.
+<br>
+    Nella sede di Casale Monferrato,
+    Everest dispone di laboratorio avanzato,
+    sanificazione, riparazioni e magazzino ampio,
+    servizi professionali garantiti nel tempo,
+    attrezzature frigorifere sempre affidabili,
+    unione di competenze al servizio.</p>
+</div> -->
+
+
+<!-- RICONDIZIONAMENTO -->
+<h2 class="ricondizionamento">Ricondizionamento</h2>
+
+<div class="contenitore-ricondizionamento">
+
+  <div>
+    <p class="descrizzione-ricondizionamento" aria-label="Oltre 240 tonnellate di rifiuti elettronici recuperati" style="background-color: rgba(0, 132, 55, 0.5);">
+      OLTRE <span class="counter" data-target="240">240</span> TONELLATE DI RIFIUTI RAE CHE NON VENGONO PORTATI ALLO SMALTIMENTO</p>
+    <img src="imgs/240ton_rifiuti_RAE.jpg" alt="">
+     <a href="/ricondizionamento" target="_blank" class="link-ricondizionamento" style="background-color: rgba(0, 132, 55, 0.5);"><p>Scopri di più
+       <i class="fa-solid fa-arrow-right-from-bracket icon-right" aria-hidden="true"></i></a> 
+    </p></a>
+  </div>
+
+  <div>
+    <p class="descrizzione-ricondizionamento" aria-label="3000 frigoriferi professionali ricondizionati all' anno">
+      <span class="counter" data-target="3000">3000</span> FRIGORIFERI PROFESSIONALI RICONDIZIONATI ALL' ANNO</p>
+    <img src="imgs/frigoriferi_ricondizionati.jpg" alt="">
+    <a href="/ricondizionamento" target="_blank" class="link-ricondizionamento"><p>Scopri di più
+       <i class="fa-solid fa-arrow-right-from-bracket icon-right" aria-hidden="true"></i></a> 
+    </p></a>
+  </div>
+  <div>
+    <p class="descrizzione-ricondizionamento" aria-label="40 anni di esperienza">
+      <span class="counter" data-target="40">40</span> ANNI DI ESPERIENZA</p>
+    <img src="imgs/sede3cropped.png" alt="">
+    <a href="/ricondizionamento" target="_blank" class="link-ricondizionamento"><p>Scopri di più
+       <i class="fa-solid fa-arrow-right-from-bracket icon-right" aria-hidden="true"></i></a> 
+    </p></a>
+  </div>
+
+</div>
+</section>
+</main>
+
+<!-- DOVE SIAMO -->
+<div class="dove-siamo">
+
+  <div class="posizione">
+    <h2>Dove Siamo</h2>
+    <address>
+      <p><span itemprop="streetAddress">Via Tarantelli 10/12</span> - <span itemprop="postalCode">15033</span>  <span itemprop="addressLocality">Casale Monferrato</span> <span itemprop="addressRegion">(AL)</span></p>
+      <a href="tel:+390142532158" itemprop="telephone">Tel. +39 0142-532158</a>
+      <a href="mailto:info@everestprofessional.it" itemprop="email" style="display: block;">commerciale@everestprofessional.it</a>
+    </address>
+    
+      <a href="https://www.facebook.com/www.everestprofessional.it" aria-label="Pagina Facebook Everest" target="_blank">
+        <img src="/imgs/facebook.png" alt="">
+      </a>
+      <a href="https://www.linkedin.com/in/everestprofessional/" aria-label="Pagina LinkedIn Everest" target="_blank">
+        <img src="/imgs/linkedin.png" alt="">
+      </a>
+      <a href="https://www.instagram.com/everestprofessionalsrl/" aria-label="Profilo Instagram Everest" target="_blank">
+        <img src="/imgs/instagram.png" alt="">
+      </a>
+      <a href="https://x.com/creacoldeverest" aria-label="Profilo Twitter Everest" target="_blank">
+        <img src="/imgs/x.png" alt="">
+      </a>
+  </div>
+
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3526.2316441437306!2d8.475583776905854!3d45.123894271070505!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4787baaae411f623%3A0xaf7ff9e067ddf459!2sEverest%20s.r.l.!5e1!3m2!1sit!2sit!4v1748273745361!5m2!1sit!2sit" 
+      width="500" 
+      height="350" 
+      style="border:0;" 
+      allowfullscreen="" 
+      loading="lazy" 
+      referrerpolicy="strict-origin-when-cross-origin"
+      title="Mappa della sede di Everest s.r.l.">
+    </iframe>
+</div>
+</section>
+<%- include('partials/footer'); -%>

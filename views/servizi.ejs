@@ -1,0 +1,220 @@
+<%- include('partials/header', { metaDescription: 'Everest offre produzione su misura, ricondizionamento green, vendita di attrezzature rigenerate e progettazione chiavi in mano per punti vendita.', pageTitle: 'Servizi - Everest Casale Monferrato' }) %>
+
+<style>
+
+/* SERVIZI */
+h1{
+    text-align: center;
+    margin-top: 40px;
+    font-size: 4rem;
+}
+.flex-container{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: center;
+    margin: 5% 0;
+    gap: 30px;
+}
+.card {
+    width: 40%;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.card h2{
+    color: #0014b9;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    text-align: center;
+    width: 70%;
+}
+.card p, .card ul, a{
+    color: #3073c0;
+    font-size: 1.3rem;
+}
+.card p, .card ul{
+    width: 60%;
+}
+.card ul{
+    margin-left: 30px;
+}
+.card a:hover .icon-right {
+  transform: translateX(4px);
+}
+/* ANIMAZIONE */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.container {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+
+.riparazioni-img, .produzione-img, .attrezzature-img, .negozio-img, .ricon-img{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+    border-radius: 5%;
+}
+.produzione-img{
+    background-image: url(/imgs/commercilizzazione.png);
+    border-radius: 10%;
+}
+.ricon-img{
+    background-image: url(/imgs/sostenibilita.jpg);
+}
+.attrezzature-img{
+    background-image: url(/imgs/attrezzature.png);
+}
+.negozio-img{
+    background-image: url(/imgs/negozio.jpg);
+}
+
+
+/* RESPONSIVNESS */
+
+/* TABLET e più piccoli */
+@media (max-width: 1024px) {
+  h1{
+    font-size: 3rem;
+  }
+
+  .flex-container{
+    flex-flow: column wrap;
+  }
+
+  .card{
+    width: 90%;
+    height: 500px;
+  }
+
+  .riparazioni-img, .produzione-img, .attrezzature-img, .negozio-img, .ricon-img{
+    border-radius: 20%;
+  }
+
+  .produzione-desc, .ricon-desc, .attrezzature-desc, .negozio-desc{
+    height: auto;
+    margin-bottom: 50px;
+  }
+
+  .ricon-img{order: 1;}
+  .ricon-desc{order: 2;}
+  .attrezzature-img{order: 3}
+  .attrezzature-desc{order: 4;}
+  .negozio-img{order: 5;}
+  .negozio-desc{order: 6;}
+  
+}
+
+/* TELEFONO */
+@media (max-width: 640px) {
+  h1{
+    font-size: 2rem;
+  }
+
+  .card{
+    height: 300px;
+  }
+
+  .flex-container h2{
+    font-size: 1.5rem;
+  }
+
+  .flex-container p, li{
+    font-size: 1rem;
+  }
+
+  .produzione-desc, .ricon-desc, .attrezzature-desc, .negozio-desc{
+    padding: 0;
+    height: auto;
+  }
+}
+
+</style>
+
+<%- include('partials/navbar'); -%>
+
+<h1 style="color: #0014b9;">Servizi</h1>
+
+<div class="flex-container">
+    
+    <div class="card produzione-img"></div>
+
+    <div class="card produzione-desc">
+      <h2>Produzione e commercializzazione</h2>
+      <p>Grazie alla partnership con aziende internazionali siamo in grado di:</p>
+      <ul>
+          <li>
+              concepire e produrre attrezzature su richieste specifiche dei nostri clienti partner
+          </li>
+          <li>
+          offrire una vasta gamma di attrezzature selezionate e garantite con un ottimo rapporto qualità/prezzo.
+          </li>
+      </ul>
+    </div>
+    
+
+    <div class="card ricon-desc">
+      <h2>Ricondizionamento</h2>
+      <p>
+          Nel nostro centro assistenza, ripariamo, ricondizioniamo, sanifichiamo, 
+          tutti i tipi di prodotti, salvaguardando nel tempo l'investimento 
+          dei nostri clienti partner.
+      </p>
+      <p><strong> Vantaggi del ricondizionamento:</strong></p>
+      <ul>
+          <li>
+              essere <strong>sostenibile green</strong>, in linea con i tempi, rimettiamo a 
+              nuovo le attrezzature frigorifere in modo che possano allungare 
+              la loro vita
+          </li>
+          <li>
+              riduzione degli investimenti in acquisto di nuove attrezzature
+          </li>
+          <li>
+              tutti i frigoriferi, pensiamo noi a smaltirli a norma di legge
+          </li>
+      </ul>
+        <a href="/ricondizionamento">Scopri di più
+          <i class="fa-solid fa-arrow-right-from-bracket icon-right" style="margin-left: 5px;"></i>
+        </a>
+    </div>
+    <div class="card ricon-img"></div>
+
+
+    <div class="card attrezzature-img"></div>
+    <div class="card attrezzature-desc">
+      <h2>Vendita di attrezzature rigenerate garantite</h2>
+      <p>
+          Grazie ai nostri frigoristi certificati F Gas che operano nel nostro Laboratorio, 
+          i frigoriferi che proponiamo sono ricondizionati nell'estetica, 
+          nella funzionalità e nella termodinamica.
+      </p>
+    </div>
+
+    <div class="card negozio-desc">
+      <h2>Progettazione nuovi punti vendita e remodeling chiavi in mano</h2>
+      <p>
+          Concept design, progettazione, consulenza e fornitura delle attrezzature da utilizzare.
+      </p>
+    </div>
+    <div class="card negozio-img"></div>
+</div>
+
+<%- include('partials/footer'); -%>

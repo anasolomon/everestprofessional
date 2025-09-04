@@ -1,0 +1,122 @@
+<%- include('partials/header', { metaDescription: 'Assistenza professionale per attrezzature frigorifere con tempi di intervento rapidi. Supporto tecnico affidabile su tutto il territorio nazionale.', pageTitle: 'Assistenza - Everest Casale Monferrato' }) %>
+
+<style>
+/* ASSISTENZA */
+.assistenza{
+  display: grid;
+  grid-template-columns: 1fr 0.7fr;
+  grid-template-rows: auto;
+  width: 80%;
+  margin: 0 auto;
+  padding: 200px 0;
+}
+
+.testo > p{
+  color: #3073c0;
+  font-size: 1.3rem;
+  width: 80%;
+}
+.assistenza h1{
+  font-size: 3rem;
+  margin-bottom: 10px;
+  color: #0014b9;
+}
+
+.assistenza .contatto{
+  margin-top: 30px;
+}
+.contatto{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+.contatto i{
+  color: red;
+}
+.numero-telefono, .assistenza a{
+  font-size: 3rem;
+  font-weight: 900;
+  color: #0014b9;
+}
+.email{
+  font-size: 2rem;
+  font-weight: 900;
+}
+.img-div{
+  background-image: url(/imgs/assistenza.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden; /* Hides any overflow */
+  border-radius: 5%;
+}
+
+/* RESPONSIVNESS */
+
+/* TABLET e più piccoli */
+@media (max-width: 1024px) {
+  .assistenza{
+    grid-template-columns: auto;
+    grid-template-rows: 1fr 1fr;
+    padding: 50px 0;
+  }
+
+  .img-div{
+    margin-top: 50px;
+  }
+}
+
+/* TELEFONO */
+@media (max-width: 640px) {
+  .assistenza{
+    grid-template-columns: 100%;
+    grid-template-rows: 1fr 0.5fr;
+  }
+  .testo h1{
+    font-size: 2rem;
+  }
+  .testo > p{
+    font-size: 1rem;
+    width: 100%;
+  }
+
+  .contatto i{
+    font-size: 1.5rem;
+  }
+  .contatto p{
+    font-size: 1rem;
+  }
+}
+</style>
+
+<%- include('partials/navbar'); -%>
+
+<!-- ASSISTENZA -->
+<div class="assistenza">
+  <div class="testo">
+    <h1>Assistenza</h1>
+    <p>La nostra azienda collabora con centri di assistenza professionali 
+        conosciuti su tutto il territorio nazionale. Sono liberi professionisti 
+        che collaborano da tempo con altre aziende distributrici e produttori 
+        del settore della rifregirazione. I tempi della risoluzione dei problemi sono 
+        attualmente dalle 48 ore circa, prendi appuntamenti programmati con l'utenza.
+        Per qualsiasi problema di funzionalità o di informazioni utili sulle attrezzature
+        frigorifere potete chiamarci senza problemi al numero e all'email sotto indicato. 
+    </p>
+    <div class="contatto">
+        <i class="fa-solid fa-phone fa-4x"></i>
+        <p class="numero-telefono">+39 0142-532158</p>
+    </div>
+    <div class="contatto">
+      <i class="fa-solid fa-envelope fa-4x"></i>
+      <a href="mailto:info@everestprofessional.it?subject=Richiesta%20informazioni&body=Buongiorno," class="link email">
+        <p class="link email">commerciale@everestprofessional.it</p>
+      </a>
+    </div>
+  </div>
+  <div class="img-div">
+  </div>
+</div>
+
+<%- include('partials/footer'); -%>

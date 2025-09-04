@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Responsiveness -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO: Meta description dinamica -->
+    <meta name="description" content="<%= metaDescription || 'Everest Casale Monferrato: vendita e assistenza di frigoriferi professionali per vino, bevande, gelati, market e catering. Ricondizionati e pronti all uso.' %>">
+
+    <!-- SEO: Title dinamico -->
+    <title><%= pageTitle || 'EVEREST' %></title>
+
+    <!-- SEO: Open Graph for social sharing -->
+    <meta property="og:title" content="<%= pageTitle || 'EVEREST' %>">
+    <meta property="og:description" content="<%= metaDescription || 'Everest Casale Monferrato: frigoriferi professionali per wine, beverage, ice cream, market e catering. Vendita, ricondizionamento e pronta consegna.' %>">
+    <meta property="og:image" content="https://www.everestprofessional.it/imgs/thumbnail.png"/>
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.everestprofessional.it"> <!-- Sostituisci con URL reale -->
+    
+    <!-- SEO: Favicon -->
+    <link rel="icon" href="/imgs/logo-everest-cropped.png" type="image/png">
+  
+    <!-- Performance: Preconnect per font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Fonts: Montserrat + Lato -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+     <!-- Styles -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Icone FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+<script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://everestprofessional.it/"
+        },
+        {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Chi Siamo",
+        "item": "https://everestprofessional.it/chisiamo"
+        },
+        {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Servizi",
+        "item": "https://everestprofessional.it/servizi"
+        },
+        {
+        "@type": "ListItem",
+        "position": 4,
+        "name": "Vendita",
+        "item": "https://everestprofessional.it/vendita"
+        },
+        {
+        "@type": "ListItem",
+        "position": 5,
+        "name": "Assistenza",
+        "item": "https://everestprofessional.it/assistenza"
+        }
+    ]
+    }
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5PPHMBY5G5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-5PPHMBY5G5');
+</script>
+</head>
+<body>
