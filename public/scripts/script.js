@@ -96,18 +96,20 @@ const paeseSelect = document.getElementById('paese');
 const regioneSelect = document.getElementById('regione');
 const regioneLabel = document.getElementById('label-regione');
 
-function toggleRegione() {
-    if (paeseSelect.value === 'IT') {
-        regioneLabel.style.display = 'inline'; // show label
-        regioneSelect.style.display = 'inline'; // show select
-    } else {
-        regioneLabel.style.display = 'none'; // hide label
-        regioneSelect.style.display = 'none'; // hide select
-    }
-}
+if (paeseSelect && regioneSelect && regioneLabel) {
+  function toggleRegione() {
+      if (paeseSelect.value === 'IT') {
+          regioneLabel.style.display = 'inline';
+          regioneSelect.style.display = 'inline';
+      } else {
+          regioneLabel.style.display = 'none';
+          regioneSelect.style.display = 'none';
+      }
+  }
 
-paeseSelect.addEventListener('change', toggleRegione);
-toggleRegione(); // set initial state
+  paeseSelect.addEventListener('change', toggleRegione);
+  toggleRegione(); // stato iniziale
+}
 
 // Disable right-click
 // document.addEventListener('contextmenu', function (e) {
