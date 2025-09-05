@@ -1,0 +1,108 @@
+<%- include('partials/header', { metaDescription: 'Everest Casale Monferrato: vendita e assistenza di frigoriferi professionali per vino, bevande, gelati, market e catering. Ricondizionati e pronti all uso.', pageTitle: 'Everest - Attrezzature Frigoriferi Professionali' }) %>
+<style>
+    .frm-father-div{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+        margin: 100px 0;
+        border: 1px solid red;
+        width: 80%;
+        padding: 30px;
+    }
+
+    .shrt-frm-div{
+        border: 1px solid blue;
+    }
+
+    .lng-frm-div{
+        border: 1px solid blue;
+        grid-column: 1 / 3;
+    }
+    label, input, select{
+        border: 1px solid green;
+        width: 100%;
+    }
+</style>
+
+<%- include('partials/navbar'); -%>
+
+<form action="send-email" method="POST">
+    <div class="frm-father-div">
+        <div class="shrt-frm-div">
+            <label for="nome">Nome</label>
+            <input type="text" name="nome" id="nome" required placeholder="Giuseppe">
+            
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" required placeholder="giuseppe@gmail.com">
+
+            <label for="paese">Paese</label>
+            <select name="paese" id="paese">
+                <option value="IT">Italia</option>
+                <option value="FR">Francia</option>
+                <option value="DE">Germania</option>
+                <option value="ES">Spagna</option>
+                <option value="US">Stati Uniti</option>
+                <option value="UK">Regno Unito</option>
+            </select>
+
+            <label for="ragione_sociale">Ragione Sociale</label>
+            <input type="text" name="ragione_sociale" id="ragione_sociale" placeholder="Ragione Sociale">
+
+        </div>
+        <div class="shrt-frm-div">
+            <label for="cognome">Cognome</label>
+            <input type="text" name="cognome" id="cognome" required placeholder="Rossi">
+
+            <label for="Telefono">Telefono</label>
+            <input type="tel" name="telefono" id="telefono" placeholder="+39 123 456 7890">
+
+            <label for="Regione" id="label-regione">Regione</label>
+            <select name="regione" id="regione">
+                 <option value="Abruzzo">Abruzzo</option>
+                <option value="Basilicata">Basilicata</option>
+                <option value="Calabria">Calabria</option>
+                <option value="Campania">Campania</option>
+                <option value="Emilia-Romagna">Emilia-Romagna</option>
+                <option value="Friuli-Venezia Giulia">Friuli-Venezia Giulia</option>
+                <option value="Lazio">Lazio</option>
+                <option value="Liguria">Liguria</option>
+                <option value="Lombardia">Lombardia</option>
+                <option value="Marche">Marche</option>
+                <option value="Molise">Molise</option>
+                <option value="Piemonte">Piemonte</option>
+                <option value="Puglia">Puglia</option>
+                <option value="Sardegna">Sardegna</option>
+                <option value="Sicilia">Sicilia</option>
+                <option value="Toscana">Toscana</option>
+                <option value="Trentino-Alto Adige">Trentino-Alto Adige</option>
+                <option value="Umbria">Umbria</option>
+                <option value="Valle d'Aosta">Valle d'Aosta</option>
+                <option value="Veneto">Veneto</option>
+            </select>
+
+            <label for="tipo_cliente">Tipologia cliente</label>
+            <select name="tipo_cliente" id="tipo_cliente">
+                <option value="distributore">Distributore</option>
+                <option value="rivenditore">Rivenditore</option>
+                <option value="attivita_commerciale">Attività commerciale</option>
+            </select>
+        </div>
+
+        <div class="lng-frm-div">
+            <label for="dipartimento">Desidero parlare con il dipartimento...</label>
+            <select name="dipartimento" id="dipartimento">
+                <option value="commerciale">Commerciale</option>
+                <option value="amministrazione">Amministrazione</option>
+                <option value="assistenza_tecnica">Assistenza tecnica</option>
+                <option value="marketing">Marketing</option>
+            </select>
+
+            <label for="messaggio">Messaggio</label>
+            <input type="text" name="messaggio" id="messaggio" placeholder="Messaggio facoltativo...">
+
+            <button type="submit">Invia</button>
+        </div>
+    </div>
+</form>
+
+<%- include('partials/footer'); -%>

@@ -92,6 +92,23 @@ function move(step) {
   track.style.transform = `translateX(-${index * 1583}px)`;
 }
 
+const paeseSelect = document.getElementById('paese');
+const regioneSelect = document.getElementById('regione');
+const regioneLabel = document.getElementById('label-regione');
+
+function toggleRegione() {
+    if (paeseSelect.value === 'IT') {
+        regioneLabel.style.display = 'inline'; // show label
+        regioneSelect.style.display = 'inline'; // show select
+    } else {
+        regioneLabel.style.display = 'none'; // hide label
+        regioneSelect.style.display = 'none'; // hide select
+    }
+}
+
+paeseSelect.addEventListener('change', toggleRegione);
+toggleRegione(); // set initial state
+
 // Disable right-click
 // document.addEventListener('contextmenu', function (e) {
 //   e.preventDefault();

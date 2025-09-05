@@ -134,6 +134,13 @@ app.get("/ricondizionamento", function(req, res){
     activePage: 'none'
   });
 });
+app.get("/contatti", function(req, res){
+    res.render("contatti", {
+    showLogoText: false,
+    showExtraMenu: false,
+    activePage: 'none'
+  });
+});
 
 
 app.get('/product/:id', (req, res) => {
