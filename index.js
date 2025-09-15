@@ -6,6 +6,8 @@ const port = process.env.PORT || 3000;
 const helmet = require('helmet');
 const rateLimit = require('express-rate-limit');
 const minifyHTML = require('express-minify-html-terser');
+const nodemailer = require('nodemailer');
+const bodyParser = require('body-parser');
 
 const app = express();
 app.set('trust proxy', 1);
@@ -86,6 +88,7 @@ const limiter = rateLimit({
 app.set('view engine', 'ejs');
 app.use(express.static("public"));
 app.use(limiter);
+app.use(bodyParser.urlencoded({ extended: false }));
 
 app.get("/", function(req, res){
     res.render("index", {
@@ -134,14 +137,78 @@ app.get("/ricondizionamento", function(req, res){
     activePage: 'none'
   });
 });
-// app.get("/contatti", function(req, res){
-//     res.render("contatti", {
-//     showLogoText: false,
-//     showExtraMenu: false,
-//     activePage: 'none'
-//   });
-// });
 
+app.get("/contatti", function(req, res){
+  res.render("contatti", {
+    showLogoText: false,
+    showExtraMenu: false,
+    activePage: 'contatti'
+  });
+});
+
+app.get("/grazie", function(req, res){
+    res.render("grazie", {
+    showLogoText: false,
+    showExtraMenu: false,
+    activePage: 'none'
+  });
+});
+
+app.post("/send-email", async (req, res) => {
+  const {
+    nome,
+    cognome,
+    email,
+    paese,
+    ragione_sociale,
+    telefono,
+    regione,
+    tipo_cliente,
+    dipartimento,
+    messaggio
+  } = req.body;
+
+  let transporter = nodemailer.createTransport({
+    service: "gmail",
+    auth: {
+      user: process.env.EMAIL_USER,
+      pass: process.env.EMAIL_PASS
+    }
+  });
+
+  // Corpo dell'email
+  let mailOptions = {
+    from: `"Everest Sito Web" <${process.env.EMAIL_USER}>`,
+    replyTo: email,
+    to: process.env.EMAIL_USER,
+    subject: `Nuovo messaggio dal sito - Dipartimento: ${dipartimento}`,
+    text: `
+Hai ricevuto un nuovo messaggio dal form contatti:
+
+👤 Nome: ${nome} ${cognome}
+📧 Email: ${email}
+📞 Telefono: ${telefono || "Non fornito"}
+🏢 Ragione Sociale: ${ragione_sociale || "Non fornita"}
+🌍 Paese: ${paese}
+🏠 Regione: ${regione}
+👥 Tipologia Cliente: ${tipo_cliente}
+🏢 Dipartimento richiesto: ${dipartimento}
+
+📝 Messaggio:
+${messaggio || "Nessun messaggio inserito"}
+    `
+  };
+
+  console.log("📧 Tentativo invio email con dati:", mailOptions);
+
+  try {
+    await transporter.sendMail(mailOptions);
+    res.status(200).redirect("/grazie");
+  } catch (err) {
+    console.error("Errore invio email:", err);
+    res.status(500).send("❌ Errore nell'invio dell'email.");
+  }
+});
 
 app.get('/product/:id', (req, res) => {
   const productId = req.params.id;

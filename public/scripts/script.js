@@ -98,8 +98,8 @@ const regioneLabel = document.getElementById('label-regione');
 
 if (paeseSelect && regioneSelect && regioneLabel) {
   function toggleRegione() {
-      if (paeseSelect.value === 'IT') {
-          regioneLabel.style.display = 'inline';
+      if (paeseSelect.value === 'Italia') {
+          regioneLabel.style.display = 'block';
           regioneSelect.style.display = 'inline';
       } else {
           regioneLabel.style.display = 'none';
