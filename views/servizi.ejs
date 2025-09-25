@@ -3,11 +3,35 @@
 <style>
 
 /* SERVIZI */
-h1{
-    text-align: center;
-    margin-top: 40px;
-    font-size: 4rem;
-}
+.banner{
+      height: 50vh;
+  }
+  .main_text{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      top: -250px;
+      width: 100%;
+      z-index: 900;
+  }
+
+  h1{
+      font-size: 64px;
+      line-height: 1.3;
+      color: white;
+      font-weight: 900;
+      margin: 30px 0;
+      /* text-shadow: 0.5px 0.5px 0 currentColor; */
+  }
+
+  .main_text p{
+      color: #F28123;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 7px;
+      font-size: 15px;
+  }
 .flex-container{
     display: flex;
     flex-flow: row wrap;
@@ -149,8 +173,10 @@ h1{
 </style>
 
 <%- include('partials/navbar'); -%>
-
-<h1 style="color: #0014b9;">Servizi</h1>
+<div class="main_text">
+  <p>Ricondizionamento e produzione</p>
+  <h1>Contattaci</h1>
+</div>
 
 <div class="flex-container">
     
