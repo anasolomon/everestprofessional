@@ -1,16 +1,43 @@
 <%- include('partials/header', { metaDescription: 'Everest, con 40 anni di esperienza, offre vendita, ricondizionamento e installazione di frigoriferi professionali per wine, beverage, gelato e catering.', pageTitle: 'CHI SIAMO - Everest Casale Monferrato' }) %>
 
 <style>
+  .banner{
+      height: 50vh;
+  }
+  .main_text{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      top: -250px;
+      width: 100%;
+      z-index: 900;
+      margin-bottom: -100px;
+  }
+
+  h1{
+      font-size: 64px;
+      line-height: 1.3;
+      color: white;
+      font-weight: 900;
+      margin: 30px 0;
+      /* text-shadow: 0.5px 0.5px 0 currentColor; */
+  }
+
+  .main_text p{
+      color: #F28123;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 7px;
+      font-size: 15px;
+  }
+
 .chi-siamo{
   margin: 50px 5%;
   display: flex;
   flex-wrap: wrap;
 }
-h1{
-  width: 100%;
-  font-size: 3rem;
-  color: #0014b9;
-}
+
 .chi-siamo-img{
   background-image: url(/imgs/chi-siamo.png);
   background-repeat: no-repeat;
@@ -58,9 +85,7 @@ h1{
     height: 1100px;
     background-size: cover;
   }
-  h1{
-    display: none;
-  }
+
   .contenitore-testo > p{
     margin: 0;
   }
@@ -85,9 +110,18 @@ h1{
 }
 
 @media (max-width: 640px) {
-  /* .chi-siamo{
-    height: 1500px;
-  } */
+  .main_text{
+    margin-bottom: -30px;
+  }
+
+  .main_text p{
+    font-size: 13px;
+    text-align: center;
+  }
+
+  .main_text h1{
+    font-size: 28px;
+  }
 
   .chi-siamo-img{
     height: 1450px;
@@ -104,9 +138,11 @@ h1{
 <%- include('partials/navbar'); -%>
 
 <!-- CHI SIAMO -->
-
-<div class="chi-siamo">
+<div class="main_text">
+  <p>Storia Everest s.r.l.</p>
   <h1>Chi Siamo</h1>
+</div>
+<div class="chi-siamo">
   <div class="chi-siamo-img"></div>
 
   <div class="contenitore-testo">

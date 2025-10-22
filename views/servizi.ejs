@@ -14,6 +14,7 @@
       top: -250px;
       width: 100%;
       z-index: 900;
+      margin-bottom: -100px;
   }
 
   h1{
@@ -32,6 +33,7 @@
       letter-spacing: 7px;
       font-size: 15px;
   }
+
 .flex-container{
     display: flex;
     flex-flow: row wrap;
@@ -148,8 +150,17 @@
 
 /* TELEFONO */
 @media (max-width: 640px) {
-  h1{
-    font-size: 2rem;
+  .main_text{
+    margin-bottom: -30px;
+  }
+  
+  .main_text p{
+    font-size: 13px;
+    text-align: center;
+  }
+
+  .main_text h1{
+    font-size: 28px;
   }
 
   .card{
@@ -175,7 +186,7 @@
 <%- include('partials/navbar'); -%>
 <div class="main_text">
   <p>Ricondizionamento e produzione</p>
-  <h1>Contattaci</h1>
+  <h1>Servizi</h1>
 </div>
 
 <div class="flex-container">

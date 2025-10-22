@@ -1,6 +1,37 @@
 <%- include('partials/header', { metaDescription: 'Ricondizionamento tecnico ed estetico di attrezzature frigorifere: pulizia, test, riparazioni con ricambi sostenibili e smaltimento RAEE certificato.', pageTitle: 'Ricondizionamento - Everest Casale Monferrato' }) %>
 
 <style>
+  .banner{
+      height: 50vh;
+  }
+  .main_text{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      top: -250px;
+      width: 100%;
+      z-index: 900;
+      margin-bottom: -100px;
+  }
+
+  h1{
+      font-size: 64px;
+      line-height: 1.3;
+      color: white;
+      font-weight: 900;
+      margin: 30px 0;
+      /* text-shadow: 0.5px 0.5px 0 currentColor; */
+  }
+
+  .main_text p{
+      color: #F28123;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 7px;
+      font-size: 15px;
+  }
+
 .center{
   text-align: center;
 }
@@ -339,6 +370,19 @@ ul{
 
 /* TELEFONO */
 @media (max-width: 640px) {
+  .main_text{
+    margin-bottom: 0;
+  }
+  
+  .main_text p{
+    font-size: 13px;
+    text-align: center;
+  }
+
+  .main_text h1{
+    font-size: 28px;
+  }
+  
   .img-albero{
     display: none;
   }
@@ -396,7 +440,10 @@ ul{
 <%- include('partials/navbar'); -%>
 
 </header>
-
+<div class="main_text">
+  <p>Termodinamico ed estetico</p>
+  <h1>Ricondizionamento</h1>
+</div>
 <!-- RICON. TECNICO/ESTETICO -->
 <div class="ricondizionamento-contenitore">
   <div class="img-albero"></div>
