@@ -47,35 +47,27 @@ h1{
   padding: 10px 20px;
   cursor: pointer;
   transition: 0.3s;
-}
-
-.main_text a{
   font-size: 1rem;
   text-decoration: none;
-  color: #F28123;
   transition: 0.3s;
-  background-color: transparent;
 }
 
 .btn_one{
   background-color: #0014b9;
-}
-.btn_one a{
-  background-color: transparent !important;
   color: white;
 }
-.btn_one:hover a{
-  color: #0014b9 !important;
-}
-.btn_one:hover, .btn_one:hover a {
+
+.btn_one:hover{
+  color: #0014b9;
   background-color: #F28123;
 }
 
 .btn_two{ 
+  color: #F28123;
   background-color: transparent;
   margin-left: 15px;
 } 
-.btn_two:hover, .btn_one:hover a {
+.btn_two:hover{
   background-color: #0014b9;
 }
 
@@ -428,9 +420,10 @@ iframe, .posizione{
 <div class="main_text">
   <p>A Casale Monferrato</p>
   <h1>Attrezzature Frigorifere Professionali</h1>
+
   <div class="main_text_btn">
-    <button class="btn_one"><a href="/vendita">Shop</a></button>
-    <button class="btn_two"><a href="/assistenza">Contattaci</a></button>
+    <a href="/vendita"><button class="btn_one">Shop</button></a>
+    <a href="/contatti"><button class="btn_two">Contattaci</button></a>
   </div>
 </div>
 
