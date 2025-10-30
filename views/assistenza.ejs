@@ -3,35 +3,35 @@
 <style>
 /* ASSISTENZA */
 .banner{
-      height: 50vh;
+  height: 50vh;
   }
-  .main_text{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      position: relative;
-      top: -250px;
-      margin-bottom: -250px;
-      width: 100%;
-      z-index: 900;
-  }
+.main_text{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  top: -250px;
+  margin-bottom: -250px;
+  width: 100%;
+  z-index: 900;
+}
 
-  h1{
-      font-size: 64px;
-      line-height: 1.3;
-      color: white;
-      font-weight: 900;
-      margin: 30px 0;
-      /* text-shadow: 0.5px 0.5px 0 currentColor; */
-  }
+h1{
+  font-size: 64px;
+  line-height: 1.3;
+  color: white;
+  font-weight: 900;
+  margin: 30px 0;
+  /* text-shadow: 0.5px 0.5px 0 currentColor; */
+}
 
-  .main_text p{
-      color: #F28123;
-      font-weight: 900;
-      text-transform: uppercase;
-      letter-spacing: 7px;
-      font-size: 15px;
-  }
+.main_text p{
+  color: #F28123;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 7px;
+  font-size: 15px;
+}
 
 .assistenza{
   display: grid;
@@ -56,24 +56,29 @@
 .assistenza .contatto{
   margin-top: 30px;
 }
+
 .contatto{
   display: flex;
   align-items: center;
   gap: 10px;
   margin-top: 20px;
 }
+
 .contatto i{
   color: red;
 }
+
 .numero-telefono, .assistenza a{
   font-size: 3rem;
   font-weight: 900;
   color: #0014b9;
 }
+
 .email{
   font-size: 2rem;
   font-weight: 900;
 }
+
 .img-div{
   background-image: url(/imgs/assistenza.jpg);
   background-repeat: no-repeat;
@@ -100,7 +105,6 @@
 
 /* TELEFONO */
 @media (max-width: 640px) {
-
   .main_text p{
     font-size: 13px;
     text-align: center;
@@ -130,6 +134,7 @@
   .contatto p{
     font-size: 1rem;
   }
+
 }
 </style>
 
@@ -156,7 +161,7 @@
     </div>
     <div class="contatto">
       <i class="fa-solid fa-envelope fa-4x"></i>
-      <a href="mailto:info@everestprofessional.it?subject=Richiesta%20informazioni&body=Buongiorno," class="link email">
+      <a href="mailto:info@everestprofessional.it?subject=Richiesta%20informazioni&body=Buongiorno," class="email">
         <p class="link email">commerciale@everestprofessional.it</p>
       </a>
     </div>

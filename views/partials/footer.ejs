@@ -1,3 +1,14 @@
+<div class="logos">
+     <div class="logos-slide">
+       <img src="/imgs/partners/Ferrero.png" />
+       <img src="/imgs/partners/Peroni.png" />
+       <img src="/imgs/partners/Heineken.png" />
+       <img src="/imgs/partners/Forst.png" />
+       <img src="/imgs/partners/Asahi.png" />
+       <img src="/imgs/partners/Lesaffre.png" />
+       <img src="/imgs/partners/GhiaccioFacile.png" />
+     </div>
+   </div>
 <footer>
 
   <div class="footer-domanda">
@@ -62,5 +73,9 @@
   
 </footer>
 <script src="/scripts/script.js"></script>
+ <script>
+      var copy = document.querySelector(".logos-slide").cloneNode(true);
+      document.querySelector(".logos").appendChild(copy);
+    </script>
 </body>
 </html>
