@@ -208,8 +208,14 @@ a:hover .icon-right {
 
 /* BOX DESCRIZZIONE */
 .box_descrizzione{
-  max-width: 40%;
+  max-width: 80%;
   margin: 0 auto;
+  padding-top: 150px;
+  display: flex;
+}
+
+.box_descrizzione_div_uno{
+  padding-right: 50px;
 }
 
 .box_descrizzione h2{
@@ -224,6 +230,16 @@ a:hover .icon-right {
   line-height: 30px;
 }
 
+.box_descrizzione img{
+  width: 500px;
+  margin-top: 100px;
+  border-radius: 5%;
+  transition: opacity 1s ease, transform 1s ease;
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
 
 /* RICONDIZIONAMENTO */
 .ricondizionamento{
@@ -290,23 +306,27 @@ section > h2{
 
 /* DOVE SIAMO */
 .dove-siamo{
-  margin: 20px 20% 0 20%;
+  margin: 20px 10% 0 10%;
   padding-bottom: 100px;
+  display: flex;
 }
-.dove-siamo h2{
+
+.dove_siamo_h2{
   margin-bottom: 10px;
   font-size: 3rem;
   color: #0014b9;
+  padding: 50px;
 }
 .dove-siamo p, a{
   margin-bottom: 5px;
   font-size: 1.3rem;
   color: #3073c0;
 }
+
 .posizione{
   display: inline-block;
   vertical-align: top;
-  margin-right: 10%;
+  margin-right: 20%;
 }
 .posizione img{
   margin: 10px 15px 0 0;
@@ -439,7 +459,7 @@ iframe, .posizione{
           </div>
           <div class="content">
             <h3>Spedizione</h3>
-            <p>Spedizione in tutta Italia</p>
+            <p>In tutta Italia e all' estero</p>
           </div>
         </div>
       </div>
@@ -450,7 +470,7 @@ iframe, .posizione{
           </div>
           <div class="content">
             <h3>Assistenza</h3>
-            <p>Garanzia ciclo vita prodotto</p>
+            <p>Su tutto il terroritorio nazionale</p>
           </div>
         </div>
       </div>
@@ -476,93 +496,108 @@ iframe, .posizione{
     <section>
   <!-- SHOP -->
       <h2>I Nostri <span style="color: #F28123;">Prodotti</span></h2>
-      <div class="card-container" aria-label="Prodotti in vetrina">
+        <div class="card-container" aria-label="Prodotti in vetrina">
 
-      <div class="card">
-        <div class="card-image">
-          <img src="imgs/frigovino.png" alt="Frigorifero professionale per la conservazione del vino modello Nettare 400 Prof.">
-        </div>
-        <div class="card-content">
-        <h3>Wine</h3>
-        <a href="/vendita#wine">Scopri il prodotto
-            <i class="fa-solid fa-arrow-right-from-bracket icon-right" aria-hidden="true"></i></a> </a>
-        </div>
-      </div>
+          <div class="card">
+            <div class="card-image">
+              <img src="imgs/frigovino.png" alt="Frigorifero professionale per la conservazione del vino modello Nettare 400 Prof.">
+            </div>
+            <div class="card-content">
+            <h3>Wine</h3>
+            <a href="/vendita#wine">Scopri il prodotto
+                <i class="fa-solid fa-arrow-right-from-bracket icon-right" aria-hidden="true"></i></a> </a>
+            </div>
+          </div>
 
-      <div class="card">
-        <div class="card-image">
-          <img src="imgs/frigobeverages.png" alt="Frigorifero professionale per la conservazione di beverage modello Cumbia 380 CA 2 LED">
-        </div>
-        <div class="card-content">
-        <h3>Beverage</h3>
-        <a href="/vendita#beverage">Scopri il prodotto
-            <i class="fa-solid fa-arrow-right-from-bracket icon-right" aria-hidden="true"></i></a> 
-        </a>
-        </div>
-      </div>
+          <div class="card">
+            <div class="card-image">
+              <img src="imgs/frigobeverages.png" alt="Frigorifero professionale per la conservazione di beverage modello Cumbia 380 CA 2 LED">
+            </div>
+            <div class="card-content">
+            <h3>Beverage</h3>
+            <a href="/vendita#beverage">Scopri il prodotto
+                <i class="fa-solid fa-arrow-right-from-bracket icon-right" aria-hidden="true"></i></a> 
+            </a>
+            </div>
+          </div>
 
-      <div class="card">
-        <div class="card-image" style="margin-top: 20%;">
-          <img src="imgs/frigopastry.png" alt="Frigorifero professionale per la conservazione di ice cream modello Gelo Glass Curved 300">
-        </div>
-        <div class="card-content">
-        <h3>Ice Cream</h3>
-        <a href="/vendita#icecream">Scopri il prodotto
-            <i class="fa-solid fa-arrow-right-from-bracket icon-right" aria-hidden="true"></i></a> 
-        </a>
-        </div>
-      </div>
+          <div class="card">
+            <div class="card-image" style="margin-top: 20%;">
+              <img src="imgs/frigopastry.png" alt="Frigorifero professionale per la conservazione di ice cream modello Gelo Glass Curved 300">
+            </div>
+            <div class="card-content">
+            <h3>Ice Cream</h3>
+            <a href="/vendita#icecream">Scopri il prodotto
+                <i class="fa-solid fa-arrow-right-from-bracket icon-right" aria-hidden="true"></i></a> 
+            </a>
+            </div>
+          </div>
 
-      <div class="card">
-        <div class="card-image" style="padding-top: 25%;">
-          <img src="imgs/frigomarket.png" alt="Frigorifero professionale per la conservazione di prodotti market modello Maxigelo 220">
-        </div>
-        <div class="card-content">
-        <h3>Market</h3>
-        <a href="/vendita#market">Scopri il prodotto
-            <i class="fa-solid fa-arrow-right-from-bracket icon-right" aria-hidden="true"></i></a> 
-        </a>
-        </div>
-      </div>
+          <div class="card">
+            <div class="card-image" style="padding-top: 25%;">
+              <img src="imgs/frigomarket.png" alt="Frigorifero professionale per la conservazione di prodotti market modello Maxigelo 220">
+            </div>
+            <div class="card-content">
+            <h3>Market</h3>
+            <a href="/vendita#market">Scopri il prodotto
+                <i class="fa-solid fa-arrow-right-from-bracket icon-right" aria-hidden="true"></i></a> 
+            </a>
+            </div>
+          </div>
 
-      <div class="card">
-        <div class="card-image">
-          <img src="imgs/frigocatering.png" alt="Frigorifero professionale per la conservazione per catering modello Perfekt 700 TN">
-        </div>
-        <div class="card-content">
-        <h3>Catering</h3>
-        <a href="/vendita#catering">Scopri il prodotto
-            <i class="fa-solid fa-arrow-right-from-bracket icon-right" aria-hidden="true"></i></a> 
-        </a>
-        </div>
-      </div>
+          <div class="card">
+            <div class="card-image">
+              <img src="imgs/frigocatering.png" alt="Frigorifero professionale per la conservazione per catering modello Perfekt 700 TN">
+            </div>
+            <div class="card-content">
+            <h3>Catering</h3>
+            <a href="/vendita#catering">Scopri il prodotto
+                <i class="fa-solid fa-arrow-right-from-bracket icon-right" aria-hidden="true"></i></a> 
+            </a>
+            </div>
+          </div>
       </div>
   <!-- END SHOP -->
 
 <!-- DESCRIZZIONE EVEREST -->
-<!-- <div class="box_descrizzione">
-  <h2>Chi è Everest?</h2>
-  <p>Everest nasce da una solida partnership,
-    quarant’anni d’esperienza professionale,
-    attrezzature innovative per refrigerazione,
-    frigoriferi moderni e soluzioni su misura,
-    servizi completi con garanzie estese,
-    assistenza continua per ogni cliente.
-<br>
-    Attenzione costante a impatto ambientale,
-    efficientamento energetico al primo posto,
-    rigenerazione apparecchiature anche obsolete,
-    qualità e risparmio unite con passione,
-    fiducia costruita con grandi aziende,
-    come Ferrero, Heineken e Forst.
-<br>
-    Nella sede di Casale Monferrato,
-    Everest dispone di laboratorio avanzato,
-    sanificazione, riparazioni e magazzino ampio,
-    servizi professionali garantiti nel tempo,
-    attrezzature frigorifere sempre affidabili,
-    unione di competenze al servizio.</p>
-</div> -->
+
+<div class="box_descrizzione">
+  <div class="box_descrizzione_div_uno">
+    <h2><i>Chi è Everest?</i></h2>
+    <p>
+      <!-- Everest nasce da una solida partnership,
+      quarant’anni d’esperienza professionale,
+      attrezzature innovative per refrigerazione,
+      frigoriferi moderni e soluzioni su misura,
+      servizi completi con garanzie estese,
+      assistenza continua per ogni cliente.
+  <br>
+      Nella sede di Casale Monferrato,
+      Everest dispone di laboratorio avanzato,
+      sanificazione, riparazioni e magazzino ampio,
+      servizi professionali garantiti nel tempo,
+      attrezzature frigorifere sempre affidabili,
+      unione di competenze al servizio. -->
+
+      <i>La tradizione nel Monferrato delle aziende
+      produttrici o di commercializzazione delle 
+      attrezzature professionali continua ad evolversi.
+      Nella zona industriale di Casale la Everest è un' azienda che oltre ad occuparsi
+      della vendita, ha come obiettivo principale il ricondizionamento
+      delle attrezzature già in utilizzo presso 
+      le utenze. Questo oltre a realizzare un importante 
+      risparmio economico alla nostra clientela è certamente un plus per 
+      il green permettendo di evitare la demolizione di quantità
+      notevoli di apparecchiature che 
+      sarebbero destinate alla rottamazzione. Ricordiamo che i frigoriferi sono 
+      identificati come RAEE (rifiuti da apparecchiature elettriche ed elettroniche) pertanto estremamente
+      nocivi, tramite noi le attrezzature verranno smaltite da aziende certificate.</i>
+    </p>
+  </div>
+  <div>
+    <img src="imgs/casale_monferrato.jpeg" alt="">
+  </div>
+</div>
 
 
 <!-- RICONDIZIONAMENTO -->
@@ -595,20 +630,20 @@ iframe, .posizione{
        <i class="fa-solid fa-arrow-right-from-bracket icon-right" aria-hidden="true"></i></a> 
     </p></a>
   </div>
-
 </div>
 </section>
 </main>
-
 <!-- DOVE SIAMO -->
+<h2 class="dove_siamo_h2">Dove Siamo</h2>
 <div class="dove-siamo">
 
   <div class="posizione">
-    <h2>Dove Siamo</h2>
     <address>
-      <p><span itemprop="streetAddress">Via Tarantelli 10/12</span> - <span itemprop="postalCode">15033</span>  <span itemprop="addressLocality">Casale Monferrato</span> <span itemprop="addressRegion">(AL)</span></p>
-      <a href="tel:+390142532158" itemprop="telephone">Tel. +39 0142-532158</a>
-      <a href="mailto:info@everestprofessional.it" itemprop="email" style="display: block;">commerciale@everestprofessional.it</a>
+      <strong>
+        <p><span itemprop="streetAddress">Via Tarantelli 10/12</span> - <span itemprop="postalCode">15033</span>  <span itemprop="addressLocality">Casale Monferrato</span> <span itemprop="addressRegion">(AL)</span></p>
+        <a href="tel:+390142532158" itemprop="telephone">Tel. +39 0142-532158</a>
+        <a href="mailto:info@everestprofessional.it" itemprop="email" style="display: block;">commerciale@everestprofessional.it</a>
+      </strong>
     </address>
     
       <a href="https://www.facebook.com/www.everestprofessional.it" aria-label="Pagina Facebook Everest" target="_blank">
@@ -625,15 +660,19 @@ iframe, .posizione{
       </a>
   </div>
 
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3526.2316441437306!2d8.475583776905854!3d45.123894271070505!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4787baaae411f623%3A0xaf7ff9e067ddf459!2sEverest%20s.r.l.!5e1!3m2!1sit!2sit!4v1748273745361!5m2!1sit!2sit" 
-      width="500" 
-      height="350" 
-      style="border:0;" 
-      allowfullscreen="" 
-      loading="lazy" 
-      referrerpolicy="strict-origin-when-cross-origin"
-      title="Mappa della sede di Everest s.r.l.">
-    </iframe>
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3526.2316441437306!2d8.475583776905854!3d45.123894271070505!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4787baaae411f623%3A0xaf7ff9e067ddf459!2sEverest%20s.r.l.!5e1!3m2!1sit!2sit!4v1748273745361!5m2!1sit!2sit" 
+    width="2000" 
+    height="450" 
+    style="border:0;" 
+    allowfullscreen="" 
+    loading="lazy" 
+    referrerpolicy="strict-origin-when-cross-origin"
+    title="Mappa della sede di Everest s.r.l.">
+  </iframe>
 </div>
 </section>
+<script>
+  var copy = document.querySelector(".logos-slide").cloneNode(true);
+  document.querySelector(".logos").appendChild(copy);
+</script>   
 <%- include('partials/footer'); -%>

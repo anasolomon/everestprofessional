@@ -253,4 +253,6 @@ app.use((req, res, next) => {
 
 app.listen(port, '127.0.0.1', () => {
   console.log(`Server started on port ${port}`);
+}).on('error', (err) => {
+  console.error('Server error:', err);
 });
