@@ -1,6 +1,5 @@
 require('dotenv').config();
 const express = require("express");
-const router = express.Router();
 const products = require('./data/prodotti.json');
 const port = process.env.PORT || 3000;
 const helmet = require('helmet');

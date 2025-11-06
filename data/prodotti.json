@@ -173,7 +173,7 @@
   },
 
   "cumbia180": {
-    "name": "CUMBIA 180 CA",
+    "name": "CUMBIA 180 CA WHITE || BLACK",
     "type": "beverages",
     "dimensions": " 390 x 475 x 1880 mm",
     "images": {
@@ -211,6 +211,48 @@
       "Serratura, 2 rullini, 2 piedini regolabili"
     ],
     "energyClassImage": "/imgs/classi_energetiche/classe_d.png",
+    "link":"https://b9eauc-06.myshopify.com/products/cumbia-180-ca?utm_source=copyToPasteBoard&utm_medium=product-links&utm_content=web"
+  },
+  
+  "visual400": {
+    "name": "VISUAL 400 WHITE || BLACK",
+    "type": "beverages",
+    "dimensions": " 625 x 610 x 1990 mm",
+    "images": {
+      "product": "/imgs/beverage/VISUAL 400 BLACK.png",
+      "schema": "/imgs/beverage/VISUAL 400 BLACK SCHEMA.png"
+    },
+    "specLabels": [
+      "Capacità (lorda/netta)",
+      "Peso netto",
+      "Refrigerazione",
+      "Refrigerante",
+      "Classe climatica",
+      "Classe energetica",
+      "Consumo kwh/24h",
+      "Temperatura esercizio",
+      "Sbrinamento",
+      "Alimentazione",
+      "Assorbimento elettrico",
+      "Illuminazione interna",
+      "Dotazione"
+    ],
+    "specs": [
+      "412 / 397 Lt",
+      "79 Kg",
+      "Ventilata (evaporatatore a pacco ventilato",
+      "R 290",
+      "4 (30°C/55%UR)",
+      "B",
+      "2,63",
+      "0 / +10°C",
+      "Automatico",
+      "230 V / 1 Ph / 50 Hz",
+      "300 w / 1,8 A",
+      "Nr 2 led verticale",
+      "Porta frameless, 4 ruote pivottanti 2 con freno"
+    ],
+    "energyClassImage": "/imgs/classi_energetiche/classe_b.png",
     "link":"https://b9eauc-06.myshopify.com/products/cumbia-180-ca?utm_source=copyToPasteBoard&utm_medium=product-links&utm_content=web"
   },
   "cumbia380": {
@@ -291,6 +333,47 @@
       "250 W / 1,4 A",
       "Nr 2 led verticali",
       "Serratura, 4 rotelle, 2 piedini regolabili"
+    ],
+    "energyClassImage": "/imgs/classi_energetiche/classe_d.png",
+    "link": "https://b9eauc-06.myshopify.com/products/cumbia-380-ca-2-led?utm_source=copyToPasteBoard&utm_medium=product-links&utm_content=web"
+  },
+  "cumbia400-2": {
+    "name": "CUMBIA 400-2 SILVER || BLACK",
+    "type": "beverages",
+    "dimensions": " 590 x 622 x 1825 mm",
+    "images": {
+      "product": "/imgs/beverage/CUMBIA 400-2 SILVER BLACK.png",
+      "schema": "/imgs/beverage/CUMBIA 400-2 SILVER BLACK SCHEMA.png"
+    },
+    "specLabels": [
+      "Capacità (lorda/netta)",
+      "Peso netto",
+      "Refrigerazione",
+      "Refrigerante",
+      "Classe climatica",
+      "Classe energetica",
+      "Temperatura esercizio",
+      "Compressore tipo",
+      "Sbrinamento",
+      "Alimentazione",
+      "Assorbimento elettrico",
+      "Illuminazione interna",
+      "Dotazione"
+    ],
+    "specs": [
+      "373 / 358 Lt",
+      "80 Kg",
+      "Ventilata",
+      "R 600",
+      "4 (30°C/55%UR)",
+      "D",
+      "+1 / 9°C",
+      "Ermetico",
+      "Fermata compressore",
+      "230 V / 1 Ph / 50 Hz",
+      "325 W / 2,7 A",
+      "Nr 1 led verticali",
+      "Serratura, 2 rullini, 2 piedini regolabili"
     ],
     "energyClassImage": "/imgs/classi_energetiche/classe_d.png",
     "link": "https://b9eauc-06.myshopify.com/products/cumbia-380-ca-2-led?utm_source=copyToPasteBoard&utm_medium=product-links&utm_content=web"
@@ -461,6 +544,90 @@
     "energyClassImage": "/imgs/classi_energetiche/classe_d.png",
     "link": "https://b9eauc-06.myshopify.com/products/cumbia-1000-ca?utm_source=copyToPasteBoard&utm_medium=product-links&utm_content=web"
   },
+  "blackbar2": {
+    "name": "BLACK BAR 2",
+    "type": "beverages",
+    "dimensions": " 900 x 530 x 865 mm",
+    "images": {
+      "product": "/imgs/beverage/BLACK BAR 2.png",
+      "schema": "/imgs/beverage/BLACK BAR 2 SCHEMA.png"
+    },
+    "specLabels": [
+      "Capacità (lorda/netta)",
+      "Peso netto",
+      "Porte",
+      "Refrigerazione",
+      "Refrigerante",
+      "Classe climatica",
+      "Classe energetica",
+      "Temperatura esercizio",
+      "Sbrinamento",
+      "Alimentazione",
+      "Assorbimento elettrico",
+      "Illuminazione interna",
+      "Dotazione"
+    ],
+    "specs": [
+      "198 / 158 Lt",
+      "50 Kg",
+      "2 porte scorrevoli autochiudenti con serratura",
+      "Ventilata",
+      "R 600",
+      " 4 (30°C/55%UR)",
+      "D",
+      "0 / +10 °C",
+      "Automatico",
+      "230 V / 1 Ph / 50 Hz",
+      "160 W / 0,78 A",
+      "1 Led verticali",
+      "Controllore elettrico, piedini"
+    ],
+    "energyClassImage": "/imgs/classi_energetiche/classe_d.png",
+    "link": "https://b9eauc-06.myshopify.com/products/cumbia-1000-ca?utm_source=copyToPasteBoard&utm_medium=product-links&utm_content=web"
+  },
+  "blackbar3": {
+    "name": "BLACK BAR 3",
+    "type": "beverages",
+    "dimensions": " 1350 x 530 x 865 mm",
+    "images": {
+      "product": "/imgs/beverage/BLACK BAR 3.png",
+      "schema": "/imgs/beverage/BLACK BAR 3 SCHEMA.png"
+    },
+    "specLabels": [
+      "Capacità (lorda/netta)",
+      "Peso netto",
+      "Porte",
+      "Refrigerazione",
+      "Refrigerante",
+      "Classe climatica",
+      "Classe energetica",
+      "Consumo kw/24h",
+      "Temperatura esercizio",
+      "Sbrinamento",
+      "Alimentazione",
+      "Assorbimento elettrico",
+      "Illuminazione interna",
+      "Dotazione"
+    ],
+    "specs": [
+      "308 / 254 Lt",
+      "69 Kg",
+      "3 porte scorrevoli autochiudenti con serratura",
+      "Ventilata",
+      "R 600",
+      "4 (30°C/55%UR)",
+      "D",
+      "1,87",
+      "0 / +10 °C",
+      "Automatico",
+      "230 V / 1 Ph / 50 Hz",
+      "160 W / 0,78 A",
+      "1 Led verticali",
+      "Controllore elettrico, piedini"
+    ],
+    "energyClassImage": "/imgs/classi_energetiche/classe_d.png",
+    "link": "https://b9eauc-06.myshopify.com/products/cumbia-1000-ca?utm_source=copyToPasteBoard&utm_medium=product-links&utm_content=web"
+  },
   "freshbox400": {
     "name": "FRESH BOX 400",
     "type": "beverages",
@@ -544,16 +711,17 @@
     "link": "https://b9eauc-06.myshopify.com/products/baby-drink?utm_source=copyToPasteBoard&utm_medium=product-links&utm_content=web"
   },
 
-  "gelo370": {
-    "name": "GELO 370",
+  "gelatissimo6": {
+    "name": "GELATISSIMO 6",
     "type": "ice cream",
-    "dimensions": " 1320 x 690 x 860 mm",
+    "dimensions": "905 x 644 x 895/1204 mm",
     "images": {
-      "product": "/imgs/ice cream/GELO 370.png",
-      "schema": "/imgs/ice cream/GELO 370 SCHEMA.png"
+      "product": "/imgs/ice cream/GELATISSIMO 6.png",
+      "schema": "/imgs/ice cream/GELATISSIMO 6 SCHEMA.png"
     },
     "specLabels": [
       "Capacità (lorda/netta)",
+      "Quantità carapine da 7 Lt (diam. 200 x h. 250mm)",
       "Peso netto",
       "Refrigerazione",
       "Refrigerante",
@@ -561,28 +729,256 @@
       "Classe energetica",
       "Consumo Kw/24h",
       "Temperatura esercizio",
+      "Controllore",
+      "Condensatore",
       "Sbrinamento",
       "Alimentazione",
       "Assorbimento elettrico",
-      "Illuminazione interna",
       "Dotazione"
     ],
     "specs": [
-      "352 / 349 Lt",
-      "48 Kg",
+      "260 / 245 Lt",
+      "Nr 6 + 4",
+      "51 Kg",
       "Statica",
-      "R 600",
-      "4 (30°C/55%UR)",
-      "D",
-      "0,936",
-      "-17 / -22 °C",
+      "R 290",
+      "7 L1",
+      "A",
+      "1,70",
+      "-10 / -20 °C",
+      "Elettronico",
+      "Maintenance free",
       "Manuale con scarico",
       "230 V / 1 Ph/ 50 Hz",
-      "101 W / 0,62 A",
-      "Led",
-      "Termostato esterno, serratura, 4 rullini"
+      "140 W / 0,95 A",
+      "Coperchi carapine, lavaporzionatore, 4 ruote pivottanti 2 con freno"
     ],
-    "energyClassImage": "/imgs/classi_energetiche/classe_d.png",
+    "energyClassImage": "/imgs/classi_energetiche/classe_a.png",
+    "link": "https://b9eauc-06.myshopify.com/products/gelo-370?utm_source=copyToPasteBoard&utm_medium=product-links&utm_content=web"
+  },
+  "gelatissimo8": {
+    "name": "GELATISSIMO 8",
+    "type": "ice cream",
+    "dimensions": "1184 x 644 x 895/1204 mm",
+    "images": {
+      "product": "/imgs/ice cream/GELATISSIMO 8.png",
+      "schema": "/imgs/ice cream/GELATISSIMO 8 SCHEMA.png"
+    },
+    "specLabels": [
+      "Capacità (lorda/netta)",
+      "Quantità carapine da 7 Lt (diam. 200 x h. 250mm)",
+      "Peso netto",
+      "Refrigerazione",
+      "Refrigerante",
+      "Classe climatica",
+      "Classe energetica",
+      "Consumo Kw/24h",
+      "Temperatura esercizio",
+      "Controllore",
+      "Condensatore",
+      "Sbrinamento",
+      "Alimentazione",
+      "Assorbimento elettrico",
+      "Dotazione"
+    ],
+    "specs": [
+      "360 / 345 Lt",
+      "Nr 8 + 6",
+      "59 Kg",
+      "Statica",
+      "R 290",
+      "7 L1",
+      "A",
+      "1,76",
+      "-10 / -20 °C",
+      "Elettronico",
+      "Maintenance free",
+      "Manuale con scarico",
+      "230 V / 1 Ph/ 50 Hz",
+      "159 W / 1,09 A",
+      "Coperchi carapine, lavaporzionatore, 4 ruote pivottanti 2 con freno"
+    ],
+    "energyClassImage": "/imgs/classi_energetiche/classe_a.png",
+    "link": "https://b9eauc-06.myshopify.com/products/gelo-370?utm_source=copyToPasteBoard&utm_medium=product-links&utm_content=web"
+  },
+  "gelatissimo10": {
+    "name": "GELATISSIMO 10",
+    "type": "ice cream",
+    "dimensions": "1439 x 644 x 895/1204 mm",
+    "images": {
+      "product": "/imgs/ice cream/GELATISSIMO 10.png",
+      "schema": "/imgs/ice cream/GELATISSIMO 10 SCHEMA.png"
+    },
+    "specLabels": [
+      "Capacità (lorda/netta)",
+      "Quantità carapine da 7 Lt (diam. 200 x h. 250mm)",
+      "Peso netto",
+      "Refrigerazione",
+      "Refrigerante",
+      "Classe climatica",
+      "Classe energetica",
+      "Consumo Kw/24h",
+      "Temperatura esercizio",
+      "Controllore",
+      "Condensatore",
+      "Sbrinamento",
+      "Alimentazione",
+      "Assorbimento elettrico",
+      "Dotazione"
+    ],
+    "specs": [
+      "460 / 445 Lt",
+      "Nr 10 + 8",
+      "65 Kg",
+      "Statica",
+      "R 290",
+      "7 L1",
+      "A",
+      "1,86",
+      "-10 / -20 °C",
+      "Elettronico",
+      "Maintenance free",
+      "Manuale con scarico",
+      "230 V / 1 Ph/ 50 Hz",
+      "189 W / 1,26 A",
+      "Coperchi carapine, lavaporzionatore, 4 ruote pivottanti 2 con freno"
+    ],
+    "energyClassImage": "/imgs/classi_energetiche/classe_a.png",
+    "link": "https://b9eauc-06.myshopify.com/products/gelo-370?utm_source=copyToPasteBoard&utm_medium=product-links&utm_content=web"
+  },
+  "happycream6": {
+    "name": "HAPPY CREAM 6",
+    "type": "ice cream",
+    "dimensions": "905 x 684 x 995/1240 mm",
+    "images": {
+      "product": "/imgs/ice cream/HAPPY CREAM 6.png",
+      "schema": "/imgs/ice cream/HAPPY CREAM 6 SCHEMA.png"
+    },
+    "specLabels": [
+      "Capacità (lorda/netta)",
+      "Quantità carapine da 7 Lt (diam. 200 x h. 250mm)",
+      "Peso netto",
+      "Refrigerazione",
+      "Refrigerante",
+      "Classe climatica",
+      "Classe energetica",
+      "Consumo Kw/24h",
+      "Temperatura esercizio",
+      "Controllore",
+      "Condensatore",
+      "Sbrinamento",
+      "Alimentazione",
+      "Assorbimento elettrico",
+      "Dotazione"
+    ],
+    "specs": [
+      "256 / 231 Lt",
+      "Nr 6 + 6",
+      "65 Kg",
+      "Statica",
+      "R 290",
+      "7 L1",
+      "A",
+      "1,86",
+      "-10 / -20 °C",
+      "Elettronico",
+      "Maintenance free",
+      "Manuale con scarico",
+      "230 V / 1 Ph/ 50 Hz",
+      "189 W / 1,26 A",
+      "Coperchi carapine, lavaporzionatore, 4 ruote pivottanti 2 con freno"
+    ],
+    "energyClassImage": "/imgs/classi_energetiche/classe_a.png",
+    "link": "https://b9eauc-06.myshopify.com/products/gelo-370?utm_source=copyToPasteBoard&utm_medium=product-links&utm_content=web"
+  },
+  "happycream8": {
+    "name": "HAPPY CREAM 8",
+    "type": "ice cream",
+    "dimensions": "1180 x 684 x 995/1240 mm",
+    "images": {
+      "product": "/imgs/ice cream/HAPPY CREAM 8.png",
+      "schema": "/imgs/ice cream/HAPPY CREAM 8 SCHEMA.png"
+    },
+    "specLabels": [
+      "Capacità (lorda/netta)",
+      "Quantità carapine da 7 Lt (diam. 200 x h. 250mm)",
+      "Peso netto",
+      "Refrigerazione",
+      "Refrigerante",
+      "Classe climatica",
+      "Classe energetica",
+      "Consumo Kw/24h",
+      "Temperatura esercizio",
+      "Controllore",
+      "Condensatore",
+      "Sbrinamento",
+      "Alimentazione",
+      "Assorbimento elettrico",
+      "Dotazione"
+    ],
+    "specs": [
+      "346 / 321 Lt",
+      "Nr 8 + 8",
+      "68 Kg",
+      "Statica con agitatore",
+      "R 290",
+      "7 L1",
+      "A",
+      "1,86",
+      "-5 / -20 °C",
+      "Elettronico",
+      "Maintenance free",
+      "Manuale con scarico",
+      "230 V / 1 Ph/ 50 Hz",
+      "260 W / 2,8 A",
+      "Piano di servizio in plexiglass, coperchi carapine, lavaporzionatore, 4 ruote pivottanti 2 con freno"
+    ],
+    "energyClassImage": "/imgs/classi_energetiche/classe_a.png",
+    "link": "https://b9eauc-06.myshopify.com/products/gelo-370?utm_source=copyToPasteBoard&utm_medium=product-links&utm_content=web"
+  },
+  "happycream10": {
+    "name": "HAPPY CREAM 10",
+    "type": "ice cream",
+    "dimensions": "1435/1515 x 684 x 995/1240 mm",
+    "images": {
+      "product": "/imgs/ice cream/HAPPY CREAM 10.png",
+      "schema": "/imgs/ice cream/HAPPY CREAM 10 SCHEMA.png"
+    },
+    "specLabels": [
+      "Capacità (lorda/netta)",
+      "Quantità carapine da 7 Lt (diam. 200 x h. 250mm)",
+      "Peso netto",
+      "Refrigerazione",
+      "Refrigerante",
+      "Classe climatica",
+      "Classe energetica",
+      "Consumo Kw/24h",
+      "Temperatura esercizio",
+      "Controllore",
+      "Condensatore",
+      "Sbrinamento",
+      "Alimentazione",
+      "Assorbimento elettrico",
+      "Dotazione"
+    ],
+    "specs": [
+      "429 / 399 Lt",
+      "Nr 10 + 10",
+      "80 Kg",
+      "Statica",
+      "R 290",
+      "7 L1",
+      "A",
+      "1,95",
+      "-5 / -20 °C",
+      "Elettronico",
+      "Maintenance free",
+      "Manuale con scarico",
+      "230 V / 1 Ph/ 50 Hz",
+      "290 W / 3,3 A",
+      "Piano di servizio in plexiglass, coperchi carapine, lavaporzionatore, 4 ruote pivottanti 2 con freno"
+    ],
+    "energyClassImage": "/imgs/classi_energetiche/classe_a.png",
     "link": "https://b9eauc-06.myshopify.com/products/gelo-370?utm_source=copyToPasteBoard&utm_medium=product-links&utm_content=web"
   },
   "gelo430": {
@@ -1125,6 +1521,219 @@
       "Separatori e ripiani regolabili in altezza in vasca, 4 piedoni"
     ],
     "energyClassImage": "/imgs/classi_energetiche/classe_c.png",
+    "link": "https://b9eauc-06.myshopify.com/products/maxigelo-194?utm_source=copyToPasteBoard&utm_medium=product-links&utm_content=web"
+  },
+  "crystallite150": {
+    "name": "CRYSTALLITE 150",
+    "type": "market",
+    "dimensions": "1586 x 946 x 840 mm",
+    "images": {
+      "product": "/imgs/market/CRYSTALLITE 150.png",
+      "schema": "/imgs/market/CRYSTALLITE 150 SCHEMA.png"
+    },
+    "specLabels": [
+      "Capacità (lorda/netta)",
+      "Peso netto",
+      "Refrigerazione",
+      "Refrigerante",
+      "Classe Climatica",
+      "Classe Energetica",
+      "Consumo Kw/24h",
+      "Temperatura Esercizio",
+      "Sbrinamento",
+      "Alimentazione",
+      "Assorbimento Elettrico",
+      "Controllore",
+      "Dotazione"
+    ],
+    "specs": [
+      "600 / 570 Lt",
+      "81 Kg",
+      "Statica",
+      "R 290",
+      "4 L1",
+      "C",
+      "4,410",
+      "-18°/-24°C",
+      "Manuale",
+      "230 V / 1 Ph/ 50 Hz",
+      "217 W / 2,07 A",
+      "Meccanico",
+      "Termometro esterno, batticarrello perimentale in plastica, 4 ruote pivottanti 2 con freno"
+    ],
+    "energyClassImage": "/imgs/classi_energetiche/classe_c.png",
+    "link": "https://b9eauc-06.myshopify.com/products/maxigelo-194?utm_source=copyToPasteBoard&utm_medium=product-links&utm_content=web"
+  },
+  "crystallite200": {
+    "name": "CRYSTALLITE 200",
+    "type": "market",
+    "dimensions": "2036 x 946 x 840 mm",
+    "images": {
+      "product": "/imgs/market/CRYSTALLITE 200.png",
+      "schema": "/imgs/market/CRYSTALLITE 200 SCHEMA.png"
+    },
+    "specLabels": [
+      "Capacità (lorda/netta)",
+      "Peso netto",
+      "Refrigerazione",
+      "Refrigerante",
+      "Classe Climatica",
+      "Classe Energetica",
+      "Consumo Kw/24h",
+      "Temperatura Esercizio",
+      "Sbrinamento",
+      "Alimentazione",
+      "Assorbimento Elettrico",
+      "Controllore",
+      "Dotazione"
+    ],
+    "specs": [
+      "800 / 785 Lt",
+      "118 Kg",
+      "Statica",
+      "R 290",
+      "7 L1",
+      "B",
+      "4,050",
+      "-18°/-24°C",
+      "Manuale",
+      "230 V / 1 Ph/ 50 Hz",
+      "265 W / 1,97 A",
+      "Meccanico",
+      "Termometro esterno, batticarrello perimentale in plastica, 4 ruote pivottanti 2 con freno"
+    ],
+    "energyClassImage": "/imgs/classi_energetiche/classe_c.png",
+    "link": "https://b9eauc-06.myshopify.com/products/maxigelo-194?utm_source=copyToPasteBoard&utm_medium=product-links&utm_content=web"
+  },
+  "crystallite250": {
+    "name": "CRYSTALLITE 250",
+    "type": "market",
+    "dimensions": "2536 x 946 x 840 mm",
+    "images": {
+      "product": "/imgs/market/CRYSTALLITE 250.png",
+      "schema": "/imgs/market/CRYSTALLITE 250 SCHEMA.png"
+    },
+    "specLabels": [
+      "Capacità (lorda/netta)",
+      "Peso netto",
+      "Refrigerazione",
+      "Refrigerante",
+      "Classe Climatica",
+      "Classe Energetica",
+      "Consumo Kw/24h",
+      "Temperatura Esercizio",
+      "Sbrinamento",
+      "Alimentazione",
+      "Assorbimento Elettrico",
+      "Controllore",
+      "Dotazione"
+    ],
+    "specs": [
+      "1050 / 1000 Lt",
+      "129 Kg",
+      "Statica",
+      "R 290",
+      "4 L1",
+      "C",
+      "7,160",
+      "-18°/-24°C",
+      "Meccanico",
+      "230 V / 1 Ph/ 50 Hz",
+      "341 W / 2,17 A",
+      "Meccanico",
+      "Termometro esterno, batticarrello perimentale in plastica, 4 ruote pivottanti 2 con freno"
+    ],
+    "energyClassImage": "/imgs/classi_energetiche/classe_c.png",
+    "link": "https://b9eauc-06.myshopify.com/products/maxigelo-194?utm_source=copyToPasteBoard&utm_medium=product-links&utm_content=web"
+  },
+  "brina1300nv": {
+    "name": "BRINA 1300 NV",
+    "type": "market",
+    "dimensions": "1370 x 760 x 2080 mm",
+    "images": {
+      "product": "/imgs/market/BRINA 1300 NV.png",
+      "schema": "/imgs/market/BRINA 1300 NV SCHEMA.png"
+    },
+    "specLabels": [
+      "Capacità (lorda/netta)",
+      "Peso netto",
+      "Porte",
+      "Refrigerazione",
+      "Refrigerante",
+      "Classe Climatica",
+      "Classe Energetica",
+      "Consumo Kw/24h",
+      "Temperatura Esercizio",
+      "Sbrinamento",
+      "Alimentazione",
+      "Assorbimento Elettrico",
+      "Controllore",
+      "Illuminazione Interna",
+      "Dotazione"
+    ],
+    "specs": [
+      "1163 / 1098 Lt",
+      "259 Kg",
+      "2 porte autochiudenti con telaio in alluminio, triplo vetro riscaldato",
+      "Ventilata",
+      "R 290",
+      "4 L1",
+      "D",
+      "19,58",
+      "-15°/-25°C",
+      "Automatico",
+      "230 V / 1 Ph/ 50 Hz",
+      "962 W / 5,12 A",
+      "Elettronico",
+      "4 Led verticali",
+      "Condensatore maintenance free, valvola compensazione, 10 ripiani in griglia + 2 di fondo, 4 rullini, 2 piedini regolabili"
+    ],
+    "energyClassImage": "/imgs/classi_energetiche/classe_d.png",
+    "link": "https://b9eauc-06.myshopify.com/products/maxigelo-194?utm_source=copyToPasteBoard&utm_medium=product-links&utm_content=web"
+  },
+  "visual1300": {
+    "name": "VISUAL 1300",
+    "type": "market",
+    "dimensions": "1364 x 716 x 2080 mm",
+    "images": {
+      "product": "/imgs/market/VISUAL 1300.png",
+      "schema": "/imgs/market/VISUAL 1300 SCHEMA.png"
+    },
+    "specLabels": [
+      "Capacità (lorda/netta)",
+      "Peso netto",
+      "Porte",
+      "Refrigerazione",
+      "Refrigerante",
+      "Classe Climatica",
+      "Classe Energetica",
+      "Consumo Kw/24h",
+      "Temperatura Esercizio",
+      "Sbrinamento",
+      "Alimentazione",
+      "Assorbimento Elettrico",
+      "Controllore",
+      "Illuminazione Interna",
+      "Dotazione"
+    ],
+    "specs": [
+      "1271 / 1200 Lt",
+      "186 Kg",
+      "2 porte autochiudenti con telaio in alluminio",
+      "Ventilata",
+      "R 290",
+      "4 (30°C/55%UR)",
+      "D",
+      "3,77",
+      "+2°/+7°C",
+      "Automatico",
+      "230 V / 1 Ph/ 50 Hz",
+      "286 W / 3,16 A",
+      "Elettronico",
+      "2 Led verticali",
+      "10 ripiani in griglia, 4 rullini, 2 piedini regolabili"
+    ],
+    "energyClassImage": "/imgs/classi_energetiche/classe_d.png",
     "link": "https://b9eauc-06.myshopify.com/products/maxigelo-194?utm_source=copyToPasteBoard&utm_medium=product-links&utm_content=web"
   },
   "cake100": {
