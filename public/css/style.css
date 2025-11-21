@@ -267,8 +267,17 @@ footer address {
   padding-top: 20px;
 }
 
-
 /* RESPONSIVNESS */
+
+/* LAPTOP PICCOLI */
+@media (max-width: 1520px){
+  nav a{
+    font-size: 1.3rem !important;
+  }
+  .logo-container {
+    max-width: 300px;
+  }
+}
 
 /* TABLET e più piccoli */
 @media (max-width: 1024px) {
