@@ -50,6 +50,7 @@ h1{
   font-size: 1rem;
   text-decoration: none;
   transition: 0.3s;
+  font-weight: 900;
 }
 
 .btn_one{
@@ -335,6 +336,87 @@ iframe, .posizione{
   margin-top: 10px;
 }
 
+/* CATALOGO */
+.div_cat_main {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  padding-bottom: 100px;
+}
+
+.div_cat_main > div{
+  width: 50%;
+  padding: 70px;
+  border-radius: 20%;
+}
+
+.div_cat_main h3{
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #0014b9;
+}
+
+.div_cat_main p{
+  color: #0014b9;
+  font-weight: 600;
+  padding: 20px 0 50px 0;
+}
+
+.div_cat_main a{
+  border: 2px solid #0014b9;
+  border-radius: 50px;
+  padding: 15px 25px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: 0.3s;
+  margin-top: 50px;
+  font-weight: 900;
+  color: white;
+  background-color: #0014b9;
+}
+
+.div_cat_primo{
+  background-color: white;
+}
+.div_cat_primo a:hover{
+  color: #0014b9;
+  background-color: #F28123;
+}
+
+.div_cat_sec{
+  background: linear-gradient(#0014b9, #3346d1);
+}
+.div_cat_sec h3{
+  color: white;
+}
+.div_cat_sec p{
+  color: rgb(223, 223, 223);
+}
+.div_cat_sec a{
+  color: #F28123;
+  background-color: transparent;
+}
+.div_cat_sec a:hover{
+  background-color: #0014b9;
+}
+
+.catalog_img, .form_img{
+  background-image: url(imgs/catalogo.png);
+  height: 200px;
+  background-size: 100% 100%;
+  background-size: contain;
+  background-position:left;
+  background-repeat: no-repeat;
+  margin: 100px 0;
+}
+
+.form_img{
+  background-image: url(imgs/form.png);
+}
 
 /* RESPONSIVNESS */
 /* TELEFONO */
@@ -441,10 +523,39 @@ iframe, .posizione{
     max-width: 400px;
     margin-top: 30px;
   }
+
+  .div_cat_main{
+    width: 95%;
+    flex-wrap: wrap;
+  }
+
+  .div_cat_main > div{
+    width: 100%;
+    height: 450px;
+    padding: 60px 20px;
+  }
+
+  .div_cat_main h3{
+    font-size: 1.5rem;
+  }
+
+  .div_cat_main p{
+    font-size: 0.7rem;
+    padding-bottom: 30px;
+  }
+  .div_cat_main a{
+    font-size: 0.6rem;
+    padding: 10px 20px;
+  }
+
+  .catalog_img, .form_img{
+    height: 100px;
+    margin-top: 100px;
+  }
 }
 
 /* TELEFONI PICCOLI */
-@media (min-width: 375px) and (max-width: 640px) {
+@media (max-width: 375px){
   .main_text p{
     font-size: 1rem;
   }
@@ -677,6 +788,27 @@ iframe, .posizione{
     referrerpolicy="strict-origin-when-cross-origin"
     title="Mappa della sede di Everest s.r.l.">
   </iframe>
+</div>
+
+<div id="catalogo" class="div_cat_main">
+  <div class="div_cat_primo">
+    <h3>Scarica il catalogo in PDF</h3>
+    <p>Esplora la nostra ampia scelta di soluzioni per la refrigerazione professionale e trova quella più adatta a te</p>
+    <a href="https://www.dropbox.com/scl/fi/0t27qw3h9gtuz7t8j0fm3/Catalogo-Everest-2025.pdf?rlkey=3pw4hqwsvlu856gikshspe31k&st=ot998weh&dl=1" download>
+      SCARICA
+    </a>
+
+    <div class="catalog_img"></div>
+  </div>
+  <div class="div_cat_sec">
+    <h3>Contattaci</h3>
+    <p>Ti risponderemo quanto prima. Comunicaci le tue richieste e domande particolari, ti daremo tutte le informazioni</p>
+    <a href="/contatti"> 
+      CONTATTACI
+    </a>
+
+    <div class="form_img"></div>
+  </div>
 </div>
 </section>
 <script>
