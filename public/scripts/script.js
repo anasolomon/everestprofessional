@@ -112,29 +112,29 @@ if (paeseSelect && regioneSelect && regioneLabel) {
 }
 
 // Disable right-click
-// document.addEventListener('contextmenu', function (e) {
-//   e.preventDefault();
-// });
+document.addEventListener('contextmenu', function (e) {
+  e.preventDefault();
+});
 
-// // Disable certain key combinations
-// document.addEventListener('keydown', function (e) {
-//   // Disable Ctrl+U (View Source)
-//   if (e.ctrlKey && e.key.toLowerCase() === 'u') {
-//     e.preventDefault();
-//   }
+// Disable certain key combinations
+document.addEventListener('keydown', function (e) {
+  // Disable Ctrl+U (View Source)
+  if (e.ctrlKey && e.key.toLowerCase() === 'u') {
+    e.preventDefault();
+  }
 
-//   // Disable Ctrl+Shift+I (DevTools)
-//   if (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === 'i') {
-//     e.preventDefault();
-//   }
+  // Disable Ctrl+Shift+I (DevTools)
+  if (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === 'i') {
+    e.preventDefault();
+  }
 
-//   // Disable F12 (DevTools)
-//   if (e.key === 'F12') {
-//     e.preventDefault();
-//   }
+  // Disable F12 (DevTools)
+  if (e.key === 'F12') {
+    e.preventDefault();
+  }
   
-//   // Disable Ctrl+Shift+C (Inspect Element)
-//   if (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === 'c') {
-//     e.preventDefault();
-//   }
-// });
+  // Disable Ctrl+Shift+C (Inspect Element)
+  if (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === 'c') {
+    e.preventDefault();
+  }
+});
